@@ -1,0 +1,1158 @@
+=> xbps-src: updating repositories for host (x86_64)...
+[*] Updating repository `https://repo-default.voidlinux.org/current/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/nonfree/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/debug/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/nonfree/x86_64-repodata' ...
+=> xbps-src: updating software in / masterdir...
+=> xbps-src: cleaning up / masterdir...
+=> rocr-runtime-7.2.3_1: removing autodeps, please wait...
+=> rocr-runtime-7.2.3_1: building with [cmake] for x86_64...
+   [host] cmake-4.2.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] pkg-config-0.29.2_3: found (https://repo-default.voidlinux.org/current)
+   [host] python3-3.14.5_1: found (https://repo-default.voidlinux.org/current)
+   [host] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [host] xxd-9.2.0506_1: found (https://repo-default.voidlinux.org/current)
+   [host] cmake-bootstrap-4.1.2_1: found (https://repo-default.voidlinux.org/current/bootstrap)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [target] libnuma-devel-2.0.18_1: found (https://repo-default.voidlinux.org/current)
+   [target] libdrm-devel-2.4.131_1: found (https://repo-default.voidlinux.org/current)
+   [target] elfutils-devel-0.194_1: found (https://repo-default.voidlinux.org/current)
+   [target] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [runtime] libnuma-2.0.18_1: found (https://repo-default.voidlinux.org/current)
+   [runtime] libdrm-2.4.131_1: found (https://repo-default.voidlinux.org/current)
+   [runtime] libelf-0.194_1: found (https://repo-default.voidlinux.org/current)
+=> rocr-runtime-7.2.3_1: installing host dependencies: cmake-4.2.2_2 ninja-1.13.2_2 pkg-config-0.29.2_3 python3-3.14.5_1 rocm-llvm-7.2.3_1 xxd-9.2.0506_1 cmake-bootstrap-4.1.2_1 ninja-1.13.2_2 ...
+=> rocr-runtime-7.2.3_1: installing target dependencies: libnuma-devel-2.0.18_1 libdrm-devel-2.4.131_1 elfutils-devel-0.194_1 rocm-device-libs-7.2.3_1 ...
+=> rocr-runtime-7.2.3_1: running do-fetch hook: 00-distfiles ...
+=> rocr-runtime-7.2.3_1: running do-extract hook: 00-distfiles ...
+=> rocr-runtime-7.2.3_1: extracting distfile(s), please wait...
+=> rocr-runtime-7.2.3_1: running do-patch hook: 00-patches ...
+=> rocr-runtime-7.2.3_1: running pre-configure hook: 00-gnu-configure-asneeded ...
+=> rocr-runtime-7.2.3_1: running pre-configure hook: 01-override-config ...
+=> rocr-runtime-7.2.3_1: running pre-configure hook: 02-script-wrapper ...
+=> rocr-runtime-7.2.3_1: running do_configure ...
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+add_rocm_subdir() -- libhsakmt
+  subdir_assigns:EOM
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2")
+-- Detected distribution: "void":
+CMake Warning at libhsakmt/CMakeLists.txt:164 (find_package):
+  By not providing "FindNUMA.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "NUMA", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "NUMA" with any of
+  the following names:
+
+    NUMAConfig.cmake
+    numa-config.cmake
+
+  Add the installation prefix of "NUMA" to CMAKE_PREFIX_PATH or set
+  "NUMA_DIR" to a directory containing one of the above files.  If "NUMA"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- LIBC: /usr/lib/libc.so
+-- NUMA: /usr/lib/libnuma.so
+-- Checking for module 'libdrm'
+--   Found libdrm, version 2.4.131
+-- Checking for module 'libdrm_amdgpu'
+--   Found libdrm_amdgpu, version 2.4.131
+-- Looking for memfd_create
+-- Looking for memfd_create - found
+add_rocm_subdir() -- runtime/hsa-runtime
+  subdir_assigns:EOM
+-- Could NOT find LibElf (missing: LibElf_DIR)
+-- Found LibElf: /usr/lib/libelf.so
+-- Performing Test ELF_GETSHDRSTRNDX
+-- Performing Test ELF_GETSHDRSTRNDX - Success
+-- Checking for module 'libdrm'
+--   Found libdrm, version 2.4.131
+-- Looking for pthread_attr_setaffinity_np
+-- Looking for pthread_attr_setaffinity_np - found
+-- Looking for pthread_rwlockattr_setkind_np
+-- Looking for pthread_rwlockattr_setkind_np - found
+Using clang from: /usr/bin/clang-22
+Using llvm-objcopy from: /usr/bin/llvm-objcopy
+Trap handlers assembled for: gfx900;gfx942;gfx950;gfx1010;gfx1030;gfx1100;gfx1200
+
+  Generating: gfx900 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_9
+
+  Generating: gfx942 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_942
+
+  Generating: gfx950 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_950
+
+  Generating: gfx1010 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_1010
+
+  Generating: gfx1030 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_10
+
+  Generating: gfx1100 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler.s
+     Trap Handler Binary: kCodeTrapHandlerV2_11
+
+  Generating: gfx1200 ...
+     Trap Handler Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/trap_handler/trap_handler_gfx12.s
+     Trap Handler Binary: kCodeTrapHandlerV2_12
+Using clang from: /usr/bin/clang-22
+Using llvm-objcopy from: /usr/bin/llvm-objcopy
+Blit Shaders assembled for: gfx900;gfx1010;gfx1030;gfx1100;gfx1200
+
+  Generating: gfx900 for kCodeCopyAligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyAligned.s
+     Blit Shader Binary: kCodeCopyAligned9
+
+  Generating: gfx1010 for kCodeCopyAligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyAligned.s
+     Blit Shader Binary: kCodeCopyAligned1010
+
+  Generating: gfx1030 for kCodeCopyAligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyAligned.s
+     Blit Shader Binary: kCodeCopyAligned10
+
+  Generating: gfx1100 for kCodeCopyAligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyAligned.s
+     Blit Shader Binary: kCodeCopyAligned11
+
+  Generating: gfx1200 for kCodeCopyAligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyAligned.s
+     Blit Shader Binary: kCodeCopyAligned12
+
+  Generating: gfx900 for kCodeCopyMisaligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyMisaligned.s
+     Blit Shader Binary: kCodeCopyMisaligned9
+
+  Generating: gfx1010 for kCodeCopyMisaligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyMisaligned.s
+     Blit Shader Binary: kCodeCopyMisaligned1010
+
+  Generating: gfx1030 for kCodeCopyMisaligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyMisaligned.s
+     Blit Shader Binary: kCodeCopyMisaligned10
+
+  Generating: gfx1100 for kCodeCopyMisaligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyMisaligned.s
+     Blit Shader Binary: kCodeCopyMisaligned11
+
+  Generating: gfx1200 for kCodeCopyMisaligned ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_copyMisaligned.s
+     Blit Shader Binary: kCodeCopyMisaligned12
+
+  Generating: gfx900 for kCodeFill ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_fill.s
+     Blit Shader Binary: kCodeFill9
+
+  Generating: gfx1010 for kCodeFill ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_fill.s
+     Blit Shader Binary: kCodeFill1010
+
+  Generating: gfx1030 for kCodeFill ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_fill.s
+     Blit Shader Binary: kCodeFill10
+
+  Generating: gfx1100 for kCodeFill ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_fill.s
+     Blit Shader Binary: kCodeFill11
+
+  Generating: gfx1200 for kCodeFill ...
+     Blit Shader Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/blit_shaders/blit_fill.s
+     Blit Shader Binary: kCodeFill12
+Using clang from: /usr/bin/clang-22
+Build Setting:
+  Target Devices*: gfx700;gfx701;gfx702;gfx801;gfx802;gfx803;gfx805;gfx810;gfx900;gfx902;gfx904;gfx906;gfx908;gfx909;gfx90a;gfx90c;gfx942;gfx950;gfx1010;gfx1011;gfx1012;gfx1013;gfx1030;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1100;gfx1101;gfx1102;gfx1103;gfx1150;gfx1151;gfx1152;gfx1153;gfx1200;gfx1201
+  (Specify ";" separated list of target IDs.)
+       Clang path: /usr/bin/clang-22
+
+  Generating: gfx700 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx700
+
+  Generating: gfx701 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx701
+
+  Generating: gfx702 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx702
+
+  Generating: gfx801 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx801
+
+  Generating: gfx802 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx802
+
+  Generating: gfx803 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx803
+
+  Generating: gfx805 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx805
+
+  Generating: gfx810 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx810
+
+  Generating: gfx900 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx900
+
+  Generating: gfx902 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx902
+
+  Generating: gfx904 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx904
+
+  Generating: gfx906 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx906
+
+  Generating: gfx908 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx908
+
+  Generating: gfx909 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx909
+
+  Generating: gfx90a ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx90a
+
+  Generating: gfx90c ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx90c
+
+  Generating: gfx942 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx942
+
+  Generating: gfx950 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx950
+
+  Generating: gfx1010 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1010
+
+  Generating: gfx1011 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1011
+
+  Generating: gfx1012 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1012
+
+  Generating: gfx1013 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1013
+
+  Generating: gfx1030 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1030
+
+  Generating: gfx1031 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1031
+
+  Generating: gfx1032 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1032
+
+  Generating: gfx1033 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1033
+
+  Generating: gfx1034 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1034
+
+  Generating: gfx1035 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1035
+
+  Generating: gfx1036 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1036
+
+  Generating: gfx1100 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1100
+
+  Generating: gfx1101 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1101
+
+  Generating: gfx1102 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1102
+
+  Generating: gfx1103 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1103
+
+  Generating: gfx1150 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1150
+
+  Generating: gfx1151 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1151
+
+  Generating: gfx1152 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1152
+
+  Generating: gfx1153 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1153
+
+  Generating: gfx1200 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1200
+
+  Generating: gfx1201 ...
+      Kernel Source: /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_src/imageblit_kernels.cl
+     Kernel Bitcode: ocl_blit_object_gfx1201
+CMake Warning at runtime/hsa-runtime/CMakeLists.txt:355 (find_package):
+  By not providing "Findrocprofiler-register.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "rocprofiler-register", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "rocprofiler-register" with any of the following names:
+
+    rocprofiler-registerConfig.cmake
+    rocprofiler-register-config.cmake
+
+  Add the installation prefix of "rocprofiler-register" to CMAKE_PREFIX_PATH
+  or set "rocprofiler-register_DIR" to a directory containing one of the
+  above files.  If "rocprofiler-register" provides a separate development
+  package or SDK, be sure it has been installed.
+
+
+Using CPACK_DEBIAN_PACKAGE_RELEASE local
+RESULT_VARIABLE no such file or directory OUTPUT_VARIABLE: 
+CPACK_RPM_PACKAGE_RELEASE: local%{?dist}
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /builddir/rocr-runtime-7.2.3/build
+=> rocr-runtime-7.2.3_1: running pre-build hook: 02-script-wrapper ...
+=> rocr-runtime-7.2.3_1: running pre_build ...
+=> rocr-runtime-7.2.3_1: running do_build ...
+[1/183] BUILDING bitcode for kCodeTrapHandlerV2_10...
+[2/183] BUILDING bitcode for kCodeCopyMisaligned10...
+[3/183] BUILDING bitcode for kCodeTrapHandlerV2_11...
+[4/183] BUILDING bitcode for kCodeCopyAligned1010...
+[5/183] BUILDING bitcode for kCodeCopyAligned11...
+[6/183] BUILDING bitcode for kCodeCopyAligned12...
+[7/183] BUILDING bitcode for kCodeCopyAligned9...
+[8/183] BUILDING bitcode for kCodeCopyMisaligned11...
+[9/183] BUILDING bitcode for kCodeTrapHandlerV2_12...
+[10/183] BUILDING bitcode for kCodeTrapHandlerV2_9...
+[11/183] BUILDING bitcode for kCodeTrapHandlerV2_950...
+[12/183] BUILDING bitcode for kCodeCopyMisaligned1010...
+[13/183] BUILDING bitcode for kCodeCopyMisaligned12...
+[14/183] BUILDING bitcode for kCodeTrapHandlerV2_1010...
+[15/183] BUILDING bitcode for kCodeTrapHandlerV2_942...
+[16/183] BUILDING bitcode for kCodeCopyAligned10...
+[17/183] Extracting binary for kCodeTrapHandlerV2_11...
+[18/183] Extracting binary for kCodeTrapHandlerV2_12...
+[19/183] Extracting binary for kCodeTrapHandlerV2_10...
+[20/183] Extracting binary for kCodeTrapHandlerV2_9...
+[21/183] Extracting binary for kCodeTrapHandlerV2_950...
+[22/183] Extracting binary for kCodeCopyAligned1010...
+[23/183] Extracting binary for kCodeTrapHandlerV2_1010...
+[24/183] Extracting binary for kCodeCopyAligned11...
+[25/183] Extracting binary for kCodeTrapHandlerV2_942...
+[26/183] Extracting binary for kCodeCopyAligned10...
+[27/183] Extracting binary for kCodeCopyAligned12...
+[28/183] Extracting binary for kCodeCopyAligned9...
+[29/183] Extracting binary for kCodeCopyMisaligned10...
+[30/183] Extracting binary for kCodeCopyMisaligned1010...
+[31/183] Extracting binary for kCodeCopyMisaligned11...
+[32/183] Extracting binary for kCodeCopyMisaligned12...
+[33/183] BUILDING bitcode for kCodeFill10...
+[34/183] BUILDING bitcode for kCodeFill11...
+[35/183] BUILDING bitcode for kCodeCopyMisaligned9...
+[36/183] BUILDING bitcode for kCodeFill12...
+[37/183] BUILDING bitcode for kCodeFill1010...
+[38/183] BUILDING bitcode for kCodeFill9...
+[39/183] Extracting binary for kCodeFill10...
+[40/183] Extracting binary for kCodeFill11...
+[41/183] Extracting binary for kCodeCopyMisaligned9...
+[42/183] Extracting binary for kCodeFill12...
+[43/183] Extracting binary for kCodeFill9...
+[44/183] Extracting binary for kCodeFill1010...
+[45/183] BUILDING bitcode for ocl_blit_object_gfx1012...
+[46/183] BUILDING bitcode for ocl_blit_object_gfx1030...
+[47/183] BUILDING bitcode for ocl_blit_object_gfx1011...
+[48/183] BUILDING bitcode for ocl_blit_object_gfx1102...
+[49/183] BUILDING bitcode for ocl_blit_object_gfx1013...
+[50/183] BUILDING bitcode for ocl_blit_object_gfx1100...
+[51/183] BUILDING bitcode for ocl_blit_object_gfx1034...
+[52/183] BUILDING bitcode for ocl_blit_object_gfx1101...
+[53/183] BUILDING bitcode for ocl_blit_object_gfx1035...
+[54/183] BUILDING bitcode for ocl_blit_object_gfx1033...
+[55/183] BUILDING bitcode for ocl_blit_object_gfx1010...
+[56/183] BUILDING bitcode for ocl_blit_object_gfx1032...
+[57/183] BUILDING bitcode for ocl_blit_object_gfx1036...
+[58/183] BUILDING bitcode for ocl_blit_object_gfx1031...
+[59/183] BUILDING bitcode for ocl_blit_object_gfx1150...
+[60/183] BUILDING bitcode for ocl_blit_object_gfx1103...
+[61/183] BUILDING bitcode for ocl_blit_object_gfx1151...
+[62/183] BUILDING bitcode for ocl_blit_object_gfx700...
+[63/183] BUILDING bitcode for ocl_blit_object_gfx1201...
+[64/183] BUILDING bitcode for ocl_blit_object_gfx701...
+[65/183] BUILDING bitcode for ocl_blit_object_gfx1152...
+[66/183] BUILDING bitcode for ocl_blit_object_gfx1200...
+[67/183] BUILDING bitcode for ocl_blit_object_gfx1153...
+[68/183] BUILDING bitcode for ocl_blit_object_gfx801...
+[69/183] BUILDING bitcode for ocl_blit_object_gfx805...
+[70/183] BUILDING bitcode for ocl_blit_object_gfx803...
+[71/183] BUILDING bitcode for ocl_blit_object_gfx802...
+[72/183] BUILDING bitcode for ocl_blit_object_gfx900...
+[73/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/globals.c.o
+[74/183] BUILDING bitcode for ocl_blit_object_gfx810...
+[75/183] BUILDING bitcode for ocl_blit_object_gfx702...
+[76/183] BUILDING bitcode for ocl_blit_object_gfx902...
+[77/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/libhsakmt.c.o
+[78/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/debug.c.o
+[79/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/events.c.o
+[80/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/time.c.o
+[81/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/openclose.c.o
+[82/183] BUILDING bitcode for ocl_blit_object_gfx904...
+[83/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/pmc_table.c.o
+[84/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/hsakmtmodel.c.o
+[85/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/spm.c.o
+[86/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/rbtree.c.o
+[87/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/memory.c.o
+[88/183] BUILDING bitcode for ocl_blit_object_gfx906...
+[89/183] BUILDING bitcode for ocl_blit_object_gfx90c...
+[90/183] BUILDING bitcode for ocl_blit_object_gfx909...
+[91/183] Collating trap handlers...
+[92/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/version.c.o
+[93/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/ais.c.o
+[94/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/pc_sampling.c.o
+[95/183] BUILDING bitcode for ocl_blit_object_gfx908...
+[96/183] Collating blit shaders...
+[97/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/kfdcontext.c.o
+[98/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/perfctr.c.o
+[99/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/queues.c.o
+[100/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/svm.c.o
+[101/183] BUILDING bitcode for ocl_blit_object_gfx90a...
+[102/183] BUILDING bitcode for ocl_blit_object_gfx950...
+[103/183] BUILDING bitcode for ocl_blit_object_gfx942...
+[104/183] Generating opencl_blit_objects.cpp
+[105/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/topology.c.o
+/builddir/rocr-runtime-7.2.3/libhsakmt/src/topology.c: In function 'hsaKmtAcquireSystemPropertiesCtx':
+/builddir/rocr-runtime-7.2.3/libhsakmt/src/topology.c:2228:33: warning: comparison of integer expressions of different signedness: 'int' and 'HSAuint32' {aka 'unsigned int'} [-Wsign-compare]
+ 2228 |         for (int node = 0; node < g_system->NumNodes; node++) {
+      |                                 ^
+[106/183] Building C object libhsakmt/CMakeFiles/hsakmt.dir/src/fmm.c.o
+[107/183] Linking C static library libhsakmt/archive/libhsakmt.a
+[108/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/driver/driver.cpp.o
+[109/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/util/timer.cpp.o
+[110/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/util/small_heap.cpp.o
+[111/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/util/flag.cpp.o
+[112/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_loader_context.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_loader_context.cpp:50:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[113/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_hsa_loader.cpp.o
+[114/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/hsa_ven_amd_loader.cpp.o
+[115/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_filter_device.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_filter_device.cpp:59:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[116/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_cpu_agent.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_cpu_agent.cpp:49:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[117/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_blit_kernel.cpp.o
+[118/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/driver/kfd/amd_kfd_driver.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/driver/kfd/amd_kfd_driver.cpp:57:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[119/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/default_signal.cpp.o
+[120/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_aql_queue.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp: In member function 'void rocr::AMD::AqlQueue::Suspend()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:610:8: warning: unused variable 'err' [-Wunused-variable]
+  610 |   auto err =
+      |        ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp: In member function 'void rocr::AMD::AqlQueue::Resume()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:618:10: warning: unused variable 'err' [-Wunused-variable]
+  618 |     auto err = agent_->driver().UpdateQueue(queue_id_, 100, priority_, ring_buf_,
+      |          ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp: In member function 'virtual hsa_status_t rocr::AMD::AqlQueue::Inactivate()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:627:10: warning: unused variable 'err' [-Wunused-variable]
+  627 |     auto err = agent_->driver().DestroyQueue(queue_id_);
+      |          ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp: In member function 'virtual void rocr::AMD::AqlQueue::ExecutePM4(uint32_t*, size_t, hsa_fence_scope_t, hsa_fence_scope_t, hsa_signal_t*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:1577:24: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+ 1577 |     hsa_signal_value_t ret;
+      |                        ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:1478:16: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+ 1478 |   hsa_status_t err;
+      |                ^~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aql_queue.cpp:64:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[121/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_memory_region.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_memory_region.cpp:48:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[122/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_topology.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_topology.cpp: In function 'void rocr::AMD::{anonymous}::SurfaceGpuList(std::vector<int>&, bool, bool)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_topology.cpp:284:20: warning: unused variable 'ret' [-Wunused-variable]
+  284 |       hsa_status_t ret = gpu_driver->GetNodeProperties(node_prop, gpu_list[idx]);
+      |                    ^~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_topology.cpp:66:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[123/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/host_queue.cpp.o
+[124/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_blit_sdma.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp:53:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp: In instantiation of 'hsa_status_t rocr::AMD::BlitSdma<useGCR>::Destroy() [with bool useGCR = false]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp:1186:16:   required from here
+ 1186 | template class BlitSdma<false>;
+      |                ^~~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp:217:10: warning: unused variable 'err' [-Wunused-variable]
+  217 |     auto err = agent_->driver().DestroyQueue(queue_resource_.QueueId);
+      |          ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp: In instantiation of 'hsa_status_t rocr::AMD::BlitSdma<useGCR>::Destroy() [with bool useGCR = true]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp:1187:16:   required from here
+ 1187 | template class BlitSdma<true>;
+      |                ^~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_blit_sdma.cpp:217:10: warning: unused variable 'err' [-Wunused-variable]
+  217 |     auto err = agent_->driver().DestroyQueue(queue_resource_.QueueId);
+      |          ^~~
+[125/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/hsa_ext_interface.cpp.o
+[126/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/common/hsa_table_interface.cpp.o
+[127/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/hsa_api_trace.cpp.o
+[128/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/cache.cpp.o
+[129/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/ipc_signal.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/ipc_signal.cpp: In destructor 'rocr::core::SharedMemory::~SharedMemory()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/ipc_signal.cpp:67:8: warning: unused variable 'err' [-Wunused-variable]
+   67 |   auto err = Runtime::runtime_singleton_->IPCDetach(ptr_);
+      |        ^~~
+[130/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/amd_hsa_locks.cpp.o
+[131/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/interrupt_signal.cpp.o
+[132/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/hsa.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp: In function 'hsa_status_t rocr::HSA::hsa_system_extension_supported(uint16_t, uint16_t, uint16_t, bool*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp:282:16: warning: unused variable 'status' [-Wunused-variable]
+  282 |   hsa_status_t status = core::Runtime::runtime_singleton_->GetSystemInfo(
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp: In function 'hsa_status_t rocr::HSA::hsa_agent_extension_supported(uint16_t, hsa_agent_t, uint16_t, uint16_t, bool*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp:652:18: warning: unused variable 'status' [-Wunused-variable]
+  652 |     hsa_status_t status =
+      |                  ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp: In function 'hsa_status_t rocr::HSA::hsa_agent_major_extension_supported(uint16_t, hsa_agent_t, uint16_t, uint16_t*, bool*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa.cpp:687:18: warning: unused variable 'status' [-Wunused-variable]
+  687 |     hsa_status_t status = agent->GetInfo(HSA_AGENT_INFO_VERSION_MAJOR, &agent_version_major);
+      |                  ^~~~~~
+[133/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/intercept_queue.cpp.o
+[134/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/queue.cpp.o
+[135/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_gpu_agent.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In constructor 'rocr::AMD::GpuAgent::GpuAgent(HSAuint32, const HsaNodeProperties&, bool, uint32_t, rocr::core::DriverType)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:215:16: warning: unused variable 'status' [-Wunused-variable]
+  215 |   hsa_status_t status = driver().IsModelEnabled(&model_enabled);
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::ReserveScratch()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:562:16: warning: unused variable 'err' [-Wunused-variable]
+  562 |   hsa_status_t err = driver().AvailableMemory(node_id(), &available);
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual void rocr::AMD::GpuAgent::ReleaseResources()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:930:22: warning: unused variable 'status' [-Wunused-variable]
+  930 |         hsa_status_t status = blit->Destroy();
+      |                      ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual hsa_status_t rocr::AMD::GpuAgent::GetInfo(hsa_agent_info_t, void*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:1631:22: warning: unused variable 'err' [-Wunused-variable]
+ 1631 |         hsa_status_t err = GetInfo((hsa_agent_info_t)HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT, &count);
+      |                      ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::SyncClocks()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2230:16: warning: unused variable 'err' [-Wunused-variable]
+ 2230 |   hsa_status_t err = driver().GetClockCounters(node_id(), &t1_);
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'hsa_status_t rocr::AMD::GpuAgent::UpdateTrapHandlerWithPCS(pcs_sampling_data_t*, pcs_sampling_data_t*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2263:20: warning: unused variable 'ret' [-Wunused-variable]
+ 2263 |       hsa_status_t ret =
+      |                    ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::BindTrapHandler()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2321:16: warning: unused variable 'err' [-Wunused-variable]
+ 2321 |   hsa_status_t err =
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::PcSamplingThread(pcs_data_t&, const char*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:3341:14: warning: unused variable 'host_buffer_end' [-Wunused-variable]
+ 3341 |     uint8_t* host_buffer_end = pcs_data.host_buffer + pcs_data.host_buffer_size;
+      |              ^~~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual hsa_status_t rocr::AMD::GpuAgent::PcSamplingFlush(rocr::pcs::PcsRuntime::PcSamplingSession&)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:3440:12: warning: unused variable 'host_buffer_end' [-Wunused-variable]
+ 3440 |   uint8_t* host_buffer_end = pcs_data->host_buffer + pcs_data->host_buffer_size;
+      |            ^~~~~~~~~~~~~~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:61:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[136/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/thunk_loader.cpp.o
+[137/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/hsa_ext_amd.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/hsa_ext_amd.cpp:57:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[138/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/amd_options.cpp.o
+[139/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/amd_hsa_code_util.cpp.o
+[140/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/addrinterface.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/addrinterface.cpp: In function 'int rocr::ElemGetExportNorm(ADDR_HANDLE, const ELEM_GETEXPORTNORM_INPUT*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/addrinterface.cpp:820:23: warning: variable 'returnCode' set but not used [-Wunused-but-set-variable]
+  820 |     ADDR_E_RETURNCODE returnCode = ADDR_OK;
+      |                       ^~~~~~~~~~
+[141/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrlib.cpp.o
+[142/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/signal.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/signal.cpp: In member function 'void rocr::core::SharedSignalPool_t::free(rocr::core::SharedSignal*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/signal.cpp:115:10: warning: variable 'valid' set but not used [-Wunused-but-set-variable]
+  115 |     bool valid = false;
+      |          ^~~~~
+[143/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/coord.cpp.o
+[144/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/svm_profiler.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/svm_profiler.cpp: In member function 'void rocr::AMD::SvmProfileControl::PollSmi()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/svm_profiler.cpp:154:10: warning: unused variable 'err' [-Wunused-variable]
+  154 |     auto err = gpu_agent->driver().OpenSMI(gpu_agent->node_id(), &files[i + 1].fd);
+      |          ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/svm_profiler.cpp:159:10: warning: unused variable 'wrote' [-Wunused-variable]
+  159 |     auto wrote = write(files[i + 1].fd, &events, sizeof(events));
+      |          ^~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/svm_profiler.cpp:224:17: warning: variable 'args' set but not used [-Wunused-but-set-variable]
+  224 |             int args = sscanf(cursor, "%x %lu -%u%n", &event_id, &time, &pid, &offset);
+      |                 ^~~~
+[145/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrobject.cpp.o
+In static member function 'static VOID rocr::Addr::Object::ClientFree(VOID*, const rocr::Addr::Client*)',
+    inlined from 'static VOID rocr::Addr::Object::operator delete(VOID*)' at /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrobject.cpp:182:15,
+    inlined from 'virtual rocr::Addr::Object::~Object()' at /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrobject.cpp:63:1:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrobject.cpp:121:28: warning: '*(const rocr::Addr::Client*)((char*)this + 8).rocr::Addr::Client::callbacks.rocr::_ADDR_CALLBACKS::freeSysMem' is used uninitialized [-Wuninitialized]
+  121 |     if (pClient->callbacks.freeSysMem != NULL)
+      |         ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrobject.cpp:128:44: warning: '*(const rocr::Addr::Client*)((char*)this + 8).rocr::Addr::Client::handle' may be used uninitialized [-Wmaybe-uninitialized]
+  128 |             freeInput.hClient   = pClient->handle;
+      |                                   ~~~~~~~~~^~~~~~
+[146/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrlib2.cpp.o
+[147/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrlib3.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.cpp: In static member function 'static rocr::Addr::V3::Lib* rocr::Addr::V3::Lib::GetLib(rocr::ADDR_HANDLE)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.cpp:134:16: warning: unused variable 'pAddrLib' [-Wunused-variable]
+  134 |     Addr::Lib* pAddrLib = Addr::Lib::GetLib(hLib);
+      |                ^~~~~~~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.cpp:18:
+In member function 'int rocr::Addr::V3::Lib::Is3dSwizzle(Addr3SwizzleMode) const',
+    inlined from 'rocr::ADDR_EXTENT3D rocr::Addr::V3::Lib::GetMipTailDim(Addr3SwizzleMode, const rocr::ADDR_EXTENT3D&) const' at /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.cpp:611:20:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.h:311:46: warning: array subscript [0, 7] is outside array bounds of 'const rocr::Addr::V3::SwizzleModeFlags [8]' [-Warray-bounds=]
+  311 |         return m_swizzleModeTable[swizzleMode].is3d;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.h: In member function 'rocr::ADDR_EXTENT3D rocr::Addr::V3::Lib::GetMipTailDim(Addr3SwizzleMode, const rocr::ADDR_EXTENT3D&) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib3.h:220:22: note: while referencing 'rocr::Addr::V3::Lib::m_swizzleModeTable'
+  220 |     SwizzleModeFlags m_swizzleModeTable[ADDR3_MAX_TYPE];  ///< Swizzle mode table
+      |                      ^~~~~~~~~~~~~~~~~~
+[148/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrlib1.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib1.cpp: In member function 'virtual VOID rocr::Addr::V1::Lib::HwlComputeXmaskCoordFromAddr(long long unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, int, int, int, rocr::ADDR_TILEINFO*, unsigned int*, unsigned int*, unsigned int*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib1.cpp:2176:13: warning: variable 'numGroupBits' set but not used [-Wunused-but-set-variable]
+ 2176 |     UINT_32 numGroupBits;
+      |             ^~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib1.cpp: In member function 'VOID rocr::Addr::V1::Lib::ComputeMipLevel(rocr::ADDR_COMPUTE_SURFACE_INFO_INPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrlib1.cpp:3522:13: warning: variable 'hwlHandled' set but not used [-Wunused-but-set-variable]
+ 3522 |     BOOL_32 hwlHandled = FALSE;
+      |             ^~~~~~~~~~
+[149/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/core/addrelemlib.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrelemlib.cpp: In member function 'VOID rocr::Addr::ElemLib::RestoreSurfaceInfo(rocr::Addr::ElemMode, unsigned int, unsigned int, unsigned int*, unsigned int*, unsigned int*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/core/addrelemlib.cpp:1258:13: warning: variable 'bBCnFormat' set but not used [-Wunused-but-set-variable]
+ 1258 |     BOOL_32 bBCnFormat = FALSE;
+      |             ^~~~~~~~~~
+[150/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/amd_hsa_code.cpp.o
+[151/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/util/lnx/os_linux.cpp.o
+[152/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/amd_elf_image.cpp.o
+[153/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/device_info.cpp.o
+[154/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/gfx12/gfx12addrlib.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx12/gfx12addrlib.cpp: In member function 'VOID rocr::Addr::V3::Gfx12Lib::GetMipOffset(const rocr::ADDR3_COMPUTE_SURFACE_INFO_INPUT*, rocr::ADDR3_COMPUTE_SURFACE_INFO_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx12/gfx12addrlib.cpp:473:20: warning: unused variable 'tailMaxDepth' [-Wunused-variable]
+  473 |            UINT_32 tailMaxDepth   = 0;
+      |                    ^~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx12/gfx12addrlib.cpp:380:26: warning: unused variable 'log2Bpp' [-Wunused-variable]
+  380 |     const UINT_32        log2Bpp       = Log2(bytesPerPixel);
+      |                          ^~~~~~~
+[155/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_aie_agent.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_aie_agent.cpp:52:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[156/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_aie_aql_queue.cpp.o
+[157/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/pcs/hsa_ven_amd_pc_sampling.cpp.o
+[158/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/loader/executable.cpp.o
+[159/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/pcs/pcs_runtime.cpp.o
+[160/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/libamdhsacode/lnx/amd_core_dump.cpp.o
+[161/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/isa.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/isa.cpp: In static member function 'static const rocr::core::IsaRegistry::IsaMap& rocr::core::IsaRegistry::GetSupportedIsas()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/isa.cpp:283:20: warning: unused variable 'hsa_name_size' [-Wunused-variable]
+  283 |   constexpr size_t hsa_name_size = 63;
+      |                    ^~~~~~~~~~~~~
+[162/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/blit_object_gfx7xx.cpp.o
+[163/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/blit_object_gfx8xx.cpp.o
+[164/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/blit_object_gfx9xx.cpp.o
+[165/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/gfx11/gfx11addrlib.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx11Lib::HwlComputeDccInfo(const rocr::ADDR2_COMPUTE_DCCINFO_INPUT*, rocr::ADDR2_COMPUTE_DCCINFO_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:377:27: warning: unused variable 'numPipeLog2' [-Wunused-variable]
+  377 |             const UINT_32 numPipeLog2 = m_pipesLog2;
+      |                           ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp: In member function 'VOID rocr::Addr::V2::Gfx11Lib::ConvertSwizzlePatternToEquation(unsigned int, AddrResourceType, AddrSwizzleMode, const rocr::Addr::V2::ADDR_SW_PATINFO*, rocr::ADDR_EQUATION*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:1152:23: warning: unused variable 'blkXLog2' [-Wunused-variable]
+ 1152 |         const UINT_32 blkXLog2 = Log2(dim.w);
+      |                       ^~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:1153:23: warning: unused variable 'blkYLog2' [-Wunused-variable]
+ 1153 |         const UINT_32 blkYLog2 = Log2(dim.h);
+      |                       ^~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:1257:23: warning: unused variable 'pipeIntMask' [-Wunused-variable]
+ 1257 |         const UINT_32 pipeIntMask = (1 << m_pipeInterleaveLog2) - 1;
+      |                       ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:1490:23: warning: unused variable 'pipeIntMask' [-Wunused-variable]
+ 1490 |         const UINT_32 pipeIntMask = (1 << m_pipeInterleaveLog2) - 1;
+      |                       ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp: In member function 'unsigned int rocr::Addr::V2::Gfx11Lib::GetValidDisplaySwizzleModes(unsigned int) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:1737:27: warning: unused variable 'family' [-Wunused-variable]
+ 1737 |         const ChipFamily  family = GetChipFamily();
+      |                           ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp: In member function 'int rocr::Addr::V2::Gfx11Lib::ValidateSwModeParams(const rocr::ADDR2_COMPUTE_SURFACE_INFO_INPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:2229:31: warning: unused variable 'isNonPrtXor' [-Wunused-variable]
+ 2229 |     const BOOL_32             isNonPrtXor = IsNonPrtXor(swizzle);
+      |                               ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx11Lib::HwlGetPreferredSurfaceSetting(const rocr::ADDR2_GET_PREFERRED_SURF_SETTING_INPUT*, rocr::ADDR2_GET_PREFERRED_SURF_SETTING_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx11/gfx11addrlib.cpp:2640:39: warning: unused variable 'sizeAlignInElement' [-Wunused-variable]
+ 2640 |                         const UINT_64 sizeAlignInElement = Max(NextPow2(pIn->minSizeAlign) / (bpp >> 3), 1u);
+      |                                       ^~~~~~~~~~~~~~~~~~
+[166/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/driver/xdna/amd_xdna_driver.cpp.o
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/driver/xdna/amd_xdna_driver.cpp:56:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[167/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/gfx10/gfx10addrlib.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp: In member function 'VOID rocr::Addr::V2::Gfx10Lib::ConvertSwizzlePatternToEquation(unsigned int, AddrResourceType, AddrSwizzleMode, const rocr::Addr::V2::ADDR_SW_PATINFO*, rocr::ADDR_EQUATION*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:1508:23: warning: unused variable 'blkXLog2' [-Wunused-variable]
+ 1508 |         const UINT_32 blkXLog2 = Log2(dim.w);
+      |                       ^~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:1509:23: warning: unused variable 'blkYLog2' [-Wunused-variable]
+ 1509 |         const UINT_32 blkYLog2 = Log2(dim.h);
+      |                       ^~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:1613:23: warning: unused variable 'pipeIntMask' [-Wunused-variable]
+ 1613 |         const UINT_32 pipeIntMask = (1 << m_pipeInterleaveLog2) - 1;
+      |                       ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:1842:23: warning: unused variable 'pipeIntMask' [-Wunused-variable]
+ 1842 |         const UINT_32 pipeIntMask = (1 << m_pipeInterleaveLog2) - 1;
+      |                       ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp: In member function 'int rocr::Addr::V2::Gfx10Lib::ValidateSwModeParams(const rocr::ADDR2_COMPUTE_SURFACE_INFO_INPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:2598:31: warning: unused variable 'isNonPrtXor' [-Wunused-variable]
+ 2598 |     const BOOL_32             isNonPrtXor = IsNonPrtXor(swizzle);
+      |                               ^~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx10Lib::HwlGetPreferredSurfaceSetting(const rocr::ADDR2_GET_PREFERRED_SURF_SETTING_INPUT*, rocr::ADDR2_GET_PREFERRED_SURF_SETTING_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx10/gfx10addrlib.cpp:3115:39: warning: unused variable 'sizeAlignInElement' [-Wunused-variable]
+ 3115 |                         const UINT_64 sizeAlignInElement = Max(NextPow2(pIn->minSizeAlign) / (bpp >> 3), 1u);
+      |                                       ^~~~~~~~~~~~~~~~~~
+[168/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/addrlib/src/gfx9/gfx9addrlib.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx9Lib::HwlComputeCmaskInfo(const rocr::ADDR2_COMPUTE_CMASK_INFO_INPUT*, rocr::ADDR2_COMPUTE_CMASK_INFO_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp:349:10: warning: unused variable 'checked' [-Wunused-variable]
+  349 |     bool checked = false;
+      |          ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx9Lib::HwlComputeDccInfo(const rocr::ADDR2_COMPUTE_DCCINFO_INPUT*, rocr::ADDR2_COMPUTE_DCCINFO_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp:714:14: warning: unused variable 'checked' [-Wunused-variable]
+  714 |         bool checked = false;
+      |              ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx9Lib::HwlComputeBlock256Equation(AddrResourceType, AddrSwizzleMode, unsigned int, rocr::ADDR_EQUATION*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp:2571:15: warning: variable 'microBlockDim' set but not used [-Wunused-but-set-variable]
+ 2571 |         Dim2d microBlockDim = Block256_2d[elementBytesLog2];
+      |               ^~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp: In member function 'virtual ADDR_E_RETURNCODE rocr::Addr::V2::Gfx9Lib::HwlGetPreferredSurfaceSetting(const rocr::ADDR2_GET_PREFERRED_SURF_SETTING_INPUT*, rocr::ADDR2_GET_PREFERRED_SURF_SETTING_OUTPUT*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp:3756:35: warning: unused variable 'sizeAlignInElement' [-Wunused-variable]
+ 3756 |                     const UINT_64 sizeAlignInElement = Max(NextPow2(pIn->minSizeAlign) / (bpp >> 3), 1u);
+      |                                   ^~~~~~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp: In member function 'ADDR_E_RETURNCODE rocr::Addr::V2::Gfx9Lib::ComputeStereoInfo(const rocr::ADDR2_COMPUTE_SURFACE_INFO_INPUT*, rocr::ADDR2_COMPUTE_SURFACE_INFO_OUTPUT*, unsigned int*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/addrlib/src/gfx9/gfx9addrlib.cpp:4017:34: warning: unused variable 'pEqToCheck' [-Wunused-variable]
+ 4017 |             const ADDR_EQUATION *pEqToCheck        = &m_equationTable[eqIndex];
+      |                                  ^~~~~~~~~~
+[169/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/hsa_ext_image.cpp.o
+[170/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_lut_kv.cpp.o
+[171/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_lut_gfx11.cpp.o
+[172/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp: In static member function 'static void rocr::image::Image::Destroy(const rocr::image::Image*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp:85:16: warning: unused variable 'status' [-Wunused-variable]
+   85 |   hsa_status_t status = AMD::hsa_amd_memory_pool_free(const_cast<Image*>(image));
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp: In static member function 'static void rocr::image::Sampler::Destroy(const rocr::image::Sampler*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp:116:16: warning: unused variable 'status' [-Wunused-variable]
+  116 |   hsa_status_t status = AMD::hsa_amd_memory_pool_free(const_cast<Sampler*>(sampler));
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp: In member function 'virtual hsa_status_t rocr::image::ImageManager::CopyImage(const rocr::image::Image&, const rocr::image::Image&, const hsa_dim3_t&, const hsa_dim3_t&, hsa_dim3_t)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager.cpp:183:16: warning: unused variable 'dst_element_size' [-Wunused-variable]
+  183 |   const size_t dst_element_size = dst_image_prop.element_size;
+      |                ^~~~~~~~~~~~~~~~
+[173/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_runtime.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_runtime.cpp: In function 'hsa_status_t rocr::image::FindKernelArgPool(hsa_amd_memory_pool_t, void*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_runtime.cpp:66:16: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   66 |   hsa_status_t err;
+      |                ^~~
+[174/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager_ai.cpp.o
+[175/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager_kv.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager_kv.cpp: In member function 'virtual hsa_status_t rocr::image::ImageManagerKv::Initialize(hsa_agent_t)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager_kv.cpp:93:16: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   93 |   hsa_status_t status = GetGPUAsicID(agent_, &chip_id_);
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/image_manager_kv.cpp:112:16: warning: unused variable 'stat' [-Wunused-variable]
+  112 |   hsa_status_t stat = HSA::hsa_get_tile_config(agent_handle, &tileConfig);
+      |                ^~~~
+[176/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager_nv.cpp.o
+[177/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager_gfx11.cpp.o
+[178/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/blit_kernel.cpp.o
+In file included from /usr/include/string.h:548,
+                 from /usr/include/c++/14.2/cstring:43,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/resource.h:48,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_kernel.h:52,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_kernel.cpp:43:
+In function 'void* memset(void*, int, size_t)',
+    inlined from 'hsa_status_t rocr::image::BlitKernel::CopyBufferToImage(rocr::image::BlitQueue&, const std::vector<rocr::image::BlitCodeInfo>&, const void*, size_t, size_t, const rocr::image::Image&, const hsa_ext_image_region_t&)' at /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/image/blit_kernel.cpp:288:9:
+/usr/include/bits/string_fortified.h:59:33: warning: 'void* __builtin_memset(void*, int, long unsigned int)' offset [0, 143] is out of the bounds [0, 0] [-Warray-bounds=]
+   59 |   return __builtin___memset_chk (__dest, __ch, __len,
+      |          ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+   60 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+[179/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/image_manager_gfx12.cpp.o
+[180/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/runtime.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp: In member function 'hsa_status_t rocr::core::Runtime::FreeMemory(void*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:383:14: warning: unused variable 'err' [-Wunused-variable]
+  383 |         auto err = DRM_CALL(amdgpu_bo_query_info(it->second.ldrm_bo, &info));
+      |              ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp: In member function 'void rocr::core::Runtime::AsyncEventsPool::free(rocr::core::Runtime::AsyncEventItem*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:1991:10: warning: variable 'valid' set but not used [-Wunused-but-set-variable]
+ 1991 |     bool valid = false;
+      |          ^~~~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:65:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h: In constructor 'rocr::core::Runtime::AsyncEventsInfo::AsyncEventsInfo(bool)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:692:10: warning: 'rocr::core::Runtime::AsyncEventsInfo::monitor_exceptions' will be initialized after [-Wreorder]
+  692 |     bool monitor_exceptions;
+      |          ^~~~~~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:690:17: warning:   'rocr::core::Runtime::AsyncEvents rocr::core::Runtime::AsyncEventsInfo::events' [-Wreorder]
+  690 |     AsyncEvents events;
+      |                 ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:2315:1: warning:   when initialized here [-Wreorder]
+ 2315 | Runtime::AsyncEventsInfo::AsyncEventsInfo(bool exceptions_)
+      | ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:691:27: warning: 'rocr::core::Runtime::AsyncEventsInfo::new_events' will be initialized after [-Wreorder]
+  691 |     ConcurrentAsyncEvents new_events;
+      |                           ^~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:689:24: warning:   'rocr::core::Runtime::AsyncEventsControl rocr::core::Runtime::AsyncEventsInfo::control' [-Wreorder]
+  689 |     AsyncEventsControl control;
+      |                        ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:2315:1: warning:   when initialized here [-Wreorder]
+ 2315 | Runtime::AsyncEventsInfo::AsyncEventsInfo(bool exceptions_)
+      | ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h: In constructor 'rocr::core::Runtime::AsyncEventsControl::AsyncEventsControl(rocr::core::Runtime::AsyncEventsInfo*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:579:22: warning: 'rocr::core::Runtime::AsyncEventsControl::info_' will be initialized after [-Wreorder]
+  579 |     AsyncEventsInfo* info_;
+      |                      ^~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/runtime.h:576:10: warning:   'bool rocr::core::Runtime::AsyncEventsControl::exit' [-Wreorder]
+  576 |     bool exit;
+      |          ^~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:2326:1: warning:   when initialized here [-Wreorder]
+ 2326 | Runtime::AsyncEventsControl::AsyncEventsControl(AsyncEventsInfo *asyncInfo)
+      | ^~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp: In lambda function:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:3357:19: warning: unused variable 'error' [-Wunused-variable]
+ 3357 |     HSAKMT_STATUS error = HSAKMT_CALL(hsaKmtSVMSetAttr(op->base, op->size, 1, &attrib));
+      |                   ^~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp: In member function 'rocr::core::Agent* rocr::core::Runtime::GetSVMPrefetchAgent(void*, size_t)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:3426:19: warning: unused variable 'error' [-Wunused-variable]
+ 3426 |     HSAKMT_STATUS error =
+      |                   ^~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp: In destructor 'rocr::core::Runtime::MappedHandleAllowedAgent::~MappedHandleAllowedAgent()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:3792:16: warning: unused variable 'status' [-Wunused-variable]
+ 3792 |   hsa_status_t status =
+      |                ^~~~~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/runtime.cpp:76:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[181/183] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/image/blit_src/opencl_blit_objects.cpp.o
+[182/183] Linking CXX shared library rocr/lib/libhsa-runtime64.so.1.18.0
+[183/183] Creating library symlink rocr/lib/libhsa-runtime64.so.1 rocr/lib/libhsa-runtime64.so
+=> rocr-runtime-7.2.3_1: skipping check (XBPS_CHECK_PKGS is disabled) ...
+=> rocr-runtime-7.2.3_1: running pre-install hook: 00-libdir ...
+=> rocr-runtime-7.2.3_1: running pre-install hook: 02-script-wrapper ...
+=> rocr-runtime-7.2.3_1: running pre-install hook: 98-fixup-gir-path ...
+=> rocr-runtime-7.2.3_1: running do_install ...
+[1/23] Extracting binary for kCodeTrapHandlerV2_10...
+[2/23] Extracting binary for kCodeTrapHandlerV2_12...
+[3/23] Extracting binary for kCodeTrapHandlerV2_1010...
+[4/23] Extracting binary for kCodeTrapHandlerV2_11...
+[5/23] Extracting binary for kCodeTrapHandlerV2_942...
+[6/23] Extracting binary for kCodeTrapHandlerV2_950...
+[7/23] Extracting binary for kCodeCopyAligned10...
+[8/23] Extracting binary for kCodeCopyMisaligned1010...
+[9/23] Extracting binary for kCodeCopyAligned12...
+[10/23] Extracting binary for kCodeCopyMisaligned10...
+[11/23] Extracting binary for kCodeCopyMisaligned12...
+[12/23] Extracting binary for kCodeTrapHandlerV2_9...
+[13/23] Extracting binary for kCodeFill10...
+[14/23] Extracting binary for kCodeCopyMisaligned9...
+[15/23] Extracting binary for kCodeFill1010...
+[16/23] Extracting binary for kCodeFill11...
+[17/23] Extracting binary for kCodeFill9...
+[18/23] Collating trap handlers...
+[19/23] Collating blit shaders...
+[20/23] Building CXX object runtime/hsa-runtime/CMakeFiles/hsa-runtime64.dir/core/runtime/amd_gpu_agent.cpp.o
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In constructor 'rocr::AMD::GpuAgent::GpuAgent(HSAuint32, const HsaNodeProperties&, bool, uint32_t, rocr::core::DriverType)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:215:16: warning: unused variable 'status' [-Wunused-variable]
+  215 |   hsa_status_t status = driver().IsModelEnabled(&model_enabled);
+      |                ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::ReserveScratch()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:562:16: warning: unused variable 'err' [-Wunused-variable]
+  562 |   hsa_status_t err = driver().AvailableMemory(node_id(), &available);
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual void rocr::AMD::GpuAgent::ReleaseResources()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:930:22: warning: unused variable 'status' [-Wunused-variable]
+  930 |         hsa_status_t status = blit->Destroy();
+      |                      ^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual hsa_status_t rocr::AMD::GpuAgent::GetInfo(hsa_agent_info_t, void*) const':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:1631:22: warning: unused variable 'err' [-Wunused-variable]
+ 1631 |         hsa_status_t err = GetInfo((hsa_agent_info_t)HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT, &count);
+      |                      ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::SyncClocks()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2230:16: warning: unused variable 'err' [-Wunused-variable]
+ 2230 |   hsa_status_t err = driver().GetClockCounters(node_id(), &t1_);
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'hsa_status_t rocr::AMD::GpuAgent::UpdateTrapHandlerWithPCS(pcs_sampling_data_t*, pcs_sampling_data_t*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2263:20: warning: unused variable 'ret' [-Wunused-variable]
+ 2263 |       hsa_status_t ret =
+      |                    ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::BindTrapHandler()':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:2321:16: warning: unused variable 'err' [-Wunused-variable]
+ 2321 |   hsa_status_t err =
+      |                ^~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'void rocr::AMD::GpuAgent::PcSamplingThread(pcs_data_t&, const char*)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:3341:14: warning: unused variable 'host_buffer_end' [-Wunused-variable]
+ 3341 |     uint8_t* host_buffer_end = pcs_data.host_buffer + pcs_data.host_buffer_size;
+      |              ^~~~~~~~~~~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp: In member function 'virtual hsa_status_t rocr::AMD::GpuAgent::PcSamplingFlush(rocr::pcs::PcsRuntime::PcSamplingSession&)':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:3440:12: warning: unused variable 'host_buffer_end' [-Wunused-variable]
+ 3440 |   uint8_t* host_buffer_end = pcs_data->host_buffer + pcs_data->host_buffer_size;
+      |            ^~~~~~~~~~~~~~~
+In file included from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:53,
+                 from /builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/runtime/amd_gpu_agent.cpp:61:
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h: In instantiation of 'void* rocr::SimpleHeap<Allocator>::alloc(size_t) [with Allocator = rocr::AMD::MemoryRegion::BlockAllocator; size_t = long unsigned int]':
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/inc/amd_memory_region.h:170:37:   required from here
+  170 |     return fragment_allocator_.alloc(size);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/builddir/rocr-runtime-7.2.3/runtime/hsa-runtime/core/util/simple_heap.h:192:12: warning: unused variable 'err' [-Wunused-variable]
+  192 |       bool err = discardBlock(reinterpret_cast<void*>(base));
+      |            ^~~
+[21/23] Linking CXX shared library rocr/lib/libhsa-runtime64.so.1.18.0
+[22/23] Creating library symlink rocr/lib/libhsa-runtime64.so.1 rocr/lib/libhsa-runtime64.so
+[22/23] Install the project...
+-- Install configuration: "Release"
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsakmt.a
+-- Up-to-date: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsakmt.a
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsakmt
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsakmt/hsakmt.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsakmt/hsakmtmodel.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsakmt/hsakmtmodeliface.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsakmt/hsakmttypes.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsakmt/hsakmtTargets.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsakmt/hsakmtTargets-release.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsakmt/hsakmt-config.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsakmt/hsakmt-config-version.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/pkgconfig/libhsakmt.pc
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so.1.18.0
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so.1
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so
+-- Up-to-date: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so.1.18.0
+-- Up-to-date: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so.1
+-- Up-to-date: /destdir/rocr-runtime-7.2.3/usr/lib64/libhsa-runtime64.so
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/share/doc/hsa-rocr/LICENSE.md
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/Brig.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/amd_hsa_common.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/amd_hsa_elf.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/amd_hsa_kernel_code.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/amd_hsa_queue.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/amd_hsa_signal.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_amd_tool.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_api_trace.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_api_trace_version.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ext_amd.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ext_finalize.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ext_image.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ven_amd_aqlprofile.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ven_amd_loader.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/include/hsa/hsa_ven_amd_pc_sampling.h
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsa-runtime64/hsa-runtime64Targets.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsa-runtime64/hsa-runtime64Targets-release.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsa-runtime64/hsa-runtime64-config.cmake
+-- Installing: /destdir/rocr-runtime-7.2.3/usr/lib64/cmake/hsa-runtime64/hsa-runtime64-config-version.cmake
+=> rocr-runtime-7.2.3_1: running post-install hook: 00-compress-info-files ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 00-fixup-gir-path ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 00-libdir ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 00-uncompress-manpages ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 01-remove-misc ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 02-remove-libtool-archives ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 02-remove-perl-files ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 02-remove-python-bytecode-files ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 03-remove-empty-dirs ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 04-create-xbps-metadata-scripts ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 05-generate-gitrevs ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 06-strip-and-debug-pkgs ...
+   Stripped static library: /usr/lib/libhsakmt.a
+   Stripped library: /usr/lib/libhsa-runtime64.so.1.18.0
+=> rocr-runtime-7.2.3_1: running post-install hook: 10-pkglint-devel-paths ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 11-pkglint-elf-in-usrshare ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 12-rename-python3-c-bindings ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 13-pkg-config-clean-xbps-cross-base-ref ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 14-fix-permissions ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 15-qt-private-api ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 80-prepare-32bit ...
+=> rocr-runtime-7.2.3_1: running post-install hook: 98-shlib-provides ...
+   SONAME libhsa-runtime64.so.1 from /usr/lib/libhsa-runtime64.so.1.18.0
+=> rocr-runtime-7.2.3_1: running post-install hook: 99-pkglint-warn-cross-cruft ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 03-restrict-py3-version ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 03-rewrite-python-shebang ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 04-generate-provides ...
+   pc:libhsakmt-7.2.3_1
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 04-generate-runtime-deps ...
+   SONAME: ld-linux-x86-64.so.2 <-> glibc>=2.41_1
+   SONAME: libc.so.6 <-> glibc>=2.41_1
+   SONAME: libdrm.so.2 <-> libdrm>=2.4.6_1
+   SONAME: libdrm_amdgpu.so.1 <-> libdrm>=2.4.64_1
+   SONAME: libelf.so.1 <-> libelf>=0.155_1
+   SONAME: libgcc_s.so.1 <-> libgcc>=4.4.0_1
+   SONAME: libm.so.6 <-> glibc>=2.41_1
+   SONAME: libnuma.so.1 <-> libnuma>=2.0.7_1
+   SONAME: libstdc++.so.6 <-> libstdc++>=4.4.0_1
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 05-generate-32bit-runtime-deps ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 06-verify-python-deps ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 90-set-timestamps ...
+=> rocr-runtime-7.2.3_1: setting mtimes to Tue May 26 07:43:18 PM UTC 2026
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 99-pkglint-subpkgs ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 99-pkglint ...
+=> rocr-runtime-7.2.3_1: running pre-pkg hook: 999-collected-rdeps ...
+   libnuma>=0 libdrm>=0 libelf>=0 glibc>=2.41_1 libdrm>=2.4.64_1 libelf>=0.155_1 libgcc>=4.4.0_1 libnuma>=2.0.7_1 libstdc++>=4.4.0_1 
+=> rocr-runtime-7.2.3_1: running do-pkg hook: 00-gen-pkg ...
+=> Creating rocr-runtime-7.2.3_1.x86_64.xbps for repository /host/binpkgs ...
+=> rocr-runtime-7.2.3_1: running post-pkg hook: 00-register-pkg ...
+=> Registering new packages to /host/binpkgs
+index: added `rocr-runtime-7.2.3_1' (x86_64).
+index: 9 packages registered.
+=> rocr-runtime-7.2.3_1: removing autodeps, please wait...
+=> rocr-runtime-7.2.3_1: cleaning build directory...
+=> rocr-runtime: removing files from destdir...

@@ -1,0 +1,370 @@
+=> xbps-src: updating repositories for host (x86_64)...
+[*] Updating repository `https://repo-default.voidlinux.org/current/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/nonfree/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/debug/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/nonfree/x86_64-repodata' ...
+=> xbps-src: updating software in / masterdir...
+=> xbps-src: cleaning up / masterdir...
+=> rocm-opencl-7.2.3_1: removing autodeps, please wait...
+=> rocm-opencl-7.2.3_1: building with [cmake] for x86_64...
+   [host] cmake-4.2.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] pkg-config-0.29.2_3: found (https://repo-default.voidlinux.org/current)
+   [host] python3-3.14.5_1: found (https://repo-default.voidlinux.org/current)
+   [host] perl-5.42.2_1: found (https://repo-default.voidlinux.org/current)
+   [host] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [host] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+   [host] cmake-bootstrap-4.1.2_1: found (https://repo-default.voidlinux.org/current/bootstrap)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [target] rocr-runtime-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+   [target] libglvnd-devel-1.7.0_1: found (https://repo-default.voidlinux.org/current)
+   [runtime] rocr-runtime-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+   [runtime] ocl-icd-2.3.2_2: found (https://repo-default.voidlinux.org/current)
+=> rocm-opencl-7.2.3_1: installing host dependencies: cmake-4.2.2_2 ninja-1.13.2_2 pkg-config-0.29.2_3 python3-3.14.5_1 perl-5.42.2_1 rocm-llvm-7.2.3_1 rocm-comgr-7.2.3_1 cmake-bootstrap-4.1.2_1 ninja-1.13.2_2 ...
+=> rocm-opencl-7.2.3_1: installing target dependencies: rocr-runtime-7.2.3_1 rocm-llvm-7.2.3_1 rocm-device-libs-7.2.3_1 rocm-comgr-7.2.3_1 libglvnd-devel-1.7.0_1 ...
+ERROR: Package `rocm-llvm-7.2.3_1' already installed.
+ERROR: Package `rocm-device-libs-7.2.3_1' already installed.
+ERROR: Package `rocm-comgr-7.2.3_1' already installed.
+=> rocm-opencl-7.2.3_1: running do-fetch hook: 00-distfiles ...
+=> rocm-opencl-7.2.3_1: running do-extract hook: 00-distfiles ...
+=> rocm-opencl-7.2.3_1: extracting distfile(s), please wait...
+=> rocm-opencl-7.2.3_1: running post_extract ...
+=> rocm-opencl-7.2.3_1: running do-patch hook: 00-patches ...
+=> rocm-opencl-7.2.3_1: running pre-configure hook: 00-gnu-configure-asneeded ...
+=> rocm-opencl-7.2.3_1: running pre-configure hook: 01-override-config ...
+=> rocm-opencl-7.2.3_1: running pre-configure hook: 02-script-wrapper ...
+=> rocm-opencl-7.2.3_1: running do_configure ...
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found AMD_OPENCL: /builddir/rocm-opencl-7.2.3/opencl/khronos/headers/opencl2.2/CL
+-- Could NOT find Git (missing: GIT_EXECUTABLE) 
+CMake Warning at rocclr/cmake/ROCclrLC.cmake:21 (find_package):
+  Could not find a configuration file for package "amd_comgr" that is
+  compatible with requested version "2.9".
+
+  The following configuration files were considered but not accepted:
+
+    /usr/lib/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /usr/lib64/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /lib/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /lib64/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+
+Call Stack (most recent call first):
+  rocclr/cmake/ROCclr.cmake:138 (include)
+  rocclr/CMakeLists.txt:28 (include)
+
+
+-- Found OpenGL: /usr/lib/libOpenGL.so
+-- ROCM Installation path(ROCM_PATH): /usr
+Using CPACK_DEBIAN_PACKAGE_RELEASE local
+Using CPACK_RPM_PACKAGE_RELEASE local
+RESULT_VARIABLE no such file or directory OUTPUT_VARIABLE: 
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /builddir/rocm-opencl-7.2.3/build
+=> rocm-opencl-7.2.3_1: running pre-build hook: 02-script-wrapper ...
+=> rocm-opencl-7.2.3_1: running do_build ...
+[1/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/blitcl.cpp.o
+[2/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os_win32.cpp.o
+[3/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhcmessages.cpp.o
+[4/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/alloc.cpp.o
+[5/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os.cpp.o
+[6/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/appprofile.cpp.o
+[7/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/comgrctx.cpp.o
+[8/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os_posix.cpp.o
+[9/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhcprintf.cpp.o
+[10/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhostcall.cpp.o
+[11/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/activity.cpp.o
+[12/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/agent.cpp.o
+[13/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/blit.cpp.o
+[14/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/ndrange.cpp.o
+[15/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/context.cpp.o
+[16/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/thread/thread.cpp.o
+In file included from /builddir/rocm-opencl-7.2.3/rocclr/include/top.hpp:57,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.hpp:24,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:21:
+In member function 'void std::atomic<_Tp>::store(_Tp, std::memory_order) [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:150:25,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/atomic:284:23: warning: 'void __atomic_store_4(volatile void*, unsigned int, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  284 |         __atomic_store(std::__addressof(_M_i),
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+  285 |                        __atomic_impl::__clear_padding(__i),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  286 |                        int(__m));
+      |                        ~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In file included from /usr/include/c++/14.2/atomic:50:
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'void amd::Thread::resume()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'void amd::Thread::resume()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function 'void std::atomic<_Tp>::store(_Tp, std::memory_order) [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:150:25,
+    inlined from 'void amd::Thread::resume()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/atomic:284:23: warning: 'void __atomic_store_4(volatile void*, unsigned int, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  284 |         __atomic_store(std::__addressof(_M_i),
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+  285 |                        __atomic_impl::__clear_padding(__i),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  286 |                        int(__m));
+      |                        ~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'void* amd::Thread::main()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:75:29:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'void* amd::Thread::main()':
+cc1plus: note: destination object is likely at address zero
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'void* amd::Thread::main()' at /builddir/rocm-opencl-7.2.3/rocclr/thread/thread.cpp:75:29:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'void* amd::Thread::main()':
+cc1plus: note: destination object is likely at address zero
+[17/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/commandqueue.cpp.o
+[18/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/utils/debug.cpp.o
+[19/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/kernel.cpp.o
+[20/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocblitcl.cpp.o
+[21/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/vmheap.cpp.o
+[22/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devkernel.cpp.o
+[23/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/command.cpp.o
+[24/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocrctx.cpp.o
+[25/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/utils/flags.cpp.o
+[26/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/device.cpp.o
+[27/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/runtime.cpp.o
+[28/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/interop_gl.cpp.o
+[29/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/elf/elf.cpp.o
+[30/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocappprofile.cpp.o
+[31/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocurilocator.cpp.o
+[32/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/memory.cpp.o
+[33/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/program.cpp.o
+[34/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devprogram.cpp.o
+/builddir/rocm-opencl-7.2.3/rocclr/device/devprogram.cpp: In member function 'bool amd::device::Program::compileToLLVMBitcode(amd_comgr_data_set_t, const std::vector<std::__cxx11::basic_string<char> >&, amd::option::Options*, char**, size_t*, bool)':
+/builddir/rocm-opencl-7.2.3/rocclr/device/devprogram.cpp:364:38: warning: 'AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS' is deprecated: Will be removed in Comgr v4.0. Currently the action    is a no-op, as the OpenCL pre-compiled headers are no longer used. [-Wdeprecated-declarations]
+  364 |       status = amd::Comgr::do_action(AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS, action, input,
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /builddir/rocm-opencl-7.2.3/rocclr/device/devprogram.hpp:26,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/device/device.hpp:34,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/platform/context.hpp:25,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/platform/command.hpp:29,
+                 from /builddir/rocm-opencl-7.2.3/rocclr/device/devprogram.cpp:21:
+/usr/include/amd_comgr/amd_comgr.h:1617:3: note: declared here
+ 1617 |   AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[35/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_d3d9.cpp.o
+[36/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_d3d10.cpp.o
+[37/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_d3d11.cpp.o
+[38/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocglinterop.cpp.o
+[39/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rockernel.cpp.o
+[40/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/roccounters.cpp.o
+[41/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocprogram.cpp.o
+[42/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocsignal.cpp.o
+[43/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_command.cpp.o
+[44/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_context.cpp.o
+[45/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_counter.cpp.o
+[46/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocsettings.cpp.o
+[47/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocmemory.cpp.o
+[48/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/compiler/lib/utils/options.cpp.o
+[49/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocprintf.cpp.o
+[50/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_device.cpp.o
+[51/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_execute.cpp.o
+[52/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_event.cpp.o
+[53/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocblit.cpp.o
+[54/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_kernel_info_amd.cpp.o
+[55/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_icd.cpp.o
+[56/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_platform_amd.cpp.o
+[57/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_pipe.cpp.o
+[58/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_p2p_amd.cpp.o
+[59/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_gl.cpp.o
+[60/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_profile_amd.cpp.o
+[61/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_sampler.cpp.o
+[62/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocdevice.cpp.o
+[63/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_program.cpp.o
+[64/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_sdi_amd.cpp.o
+[65/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_memobj.cpp.o
+[66/73] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocvirtual.cpp.o
+[67/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_thread_trace_amd.cpp.o
+[68/73] Linking CXX static library rocclr/librocclr.a
+[69/73] Building CXX object opencl/amdocl/CMakeFiles/amdocl.dir/cl_svm.cpp.o
+[70/73] Linking CXX shared library opencl/amdocl/libamdocl64.so.
+[71/73] Creating library symlink opencl/amdocl/libamdocl64.so.2 opencl/amdocl/libamdocl64.so
+[72/73] Building CXX object opencl/tools/cltrace/CMakeFiles/cltrace.dir/cltrace.cpp.o
+In file included from /builddir/rocm-opencl-7.2.3/rocclr/include/vdi_agent_amd.h:25,
+                 from /builddir/rocm-opencl-7.2.3/opencl/tools/cltrace/cltrace.cpp:6:
+/builddir/rocm-opencl-7.2.3/opencl/amdocl/cl_icd_amd.h:717:33: warning: 'clGetKernelSubGroupInfoKHR_fn' is deprecated [-Wdeprecated-declarations]
+  717 |   clGetKernelSubGroupInfoKHR_fn GetKernelSubGroupInfoKHR;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+/builddir/rocm-opencl-7.2.3/opencl/amdocl/cl_icd_amd.h:551:29: note: declared here
+  551 | typedef cl_int(CL_API_CALL* clGetKernelSubGroupInfoKHR_fn)(
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/builddir/rocm-opencl-7.2.3/opencl/amdocl/cl_icd_amd.h:725:33: warning: 'clGetKernelSubGroupInfoKHR_fn' is deprecated [-Wdeprecated-declarations]
+  725 |   clGetKernelSubGroupInfoKHR_fn GetKernelSubGroupInfo;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/builddir/rocm-opencl-7.2.3/opencl/amdocl/cl_icd_amd.h:551:29: note: declared here
+  551 | typedef cl_int(CL_API_CALL* clGetKernelSubGroupInfoKHR_fn)(
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[73/73] Linking CXX shared library opencl/tools/cltrace/libcltrace.so
+=> rocm-opencl-7.2.3_1: skipping check (XBPS_CHECK_PKGS is disabled) ...
+=> rocm-opencl-7.2.3_1: running pre-install hook: 00-libdir ...
+=> rocm-opencl-7.2.3_1: running pre-install hook: 02-script-wrapper ...
+=> rocm-opencl-7.2.3_1: running pre-install hook: 98-fixup-gir-path ...
+=> rocm-opencl-7.2.3_1: running do_install ...
+[1/3] Linking CXX shared library opencl/amdocl/libamdocl64.so.
+[2/3] Creating library symlink opencl/amdocl/libamdocl64.so.2 opencl/amdocl/libamdocl64.so
+[2/3] Install the project...
+-- Install configuration: "Release"
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.2
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/lib64/libcltrace.so
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl.hpp
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl2.hpp
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_dx9_media_sharing_intel.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_ext.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_ext_intel.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_gl.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_gl_ext.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_icd.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_platform.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_va_api_media_sharing_intel.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_version.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/opencl.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.2
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so.2
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/lib64/libamdocl64.so
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/share/doc/opencl/LICENSE.md
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/share/doc/opencl-asan/LICENSE.md
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl.hpp
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl2.hpp
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_dx9_media_sharing_intel.h
+-- Installing: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_egl.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_ext.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_ext_intel.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_gl.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_gl_ext.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_icd.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_platform.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_va_api_media_sharing_intel.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/cl_version.h
+-- Up-to-date: /destdir/rocm-opencl-7.2.3/usr/include/CL/opencl.h
+=> rocm-opencl-7.2.3_1: running post_install ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 00-compress-info-files ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 00-fixup-gir-path ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 00-libdir ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 00-uncompress-manpages ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 01-remove-misc ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 02-remove-libtool-archives ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 02-remove-perl-files ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 02-remove-python-bytecode-files ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 03-remove-empty-dirs ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 04-create-xbps-metadata-scripts ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 05-generate-gitrevs ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 06-strip-and-debug-pkgs ...
+   Stripped library: /usr/lib/libamdocl64.so.
+   Stripped library: /usr/lib/libcltrace.so
+=> rocm-opencl-7.2.3_1: running post-install hook: 10-pkglint-devel-paths ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 11-pkglint-elf-in-usrshare ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 12-rename-python3-c-bindings ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 13-pkg-config-clean-xbps-cross-base-ref ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 14-fix-permissions ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 15-qt-private-api ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 80-prepare-32bit ...
+=> rocm-opencl-7.2.3_1: running post-install hook: 98-shlib-provides ...
+   SONAME libamdocl64.so.2 from /usr/lib/libamdocl64.so.
+   SONAME libcltrace.so from /usr/lib/libcltrace.so
+=> rocm-opencl-7.2.3_1: running post-install hook: 99-pkglint-warn-cross-cruft ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 03-restrict-py3-version ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 03-rewrite-python-shebang ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 04-generate-provides ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 04-generate-runtime-deps ...
+   SONAME: ld-linux-x86-64.so.2 <-> glibc>=2.41_1
+   SONAME: libc.so.6 <-> glibc>=2.41_1
+   SONAME: libgcc_s.so.1 <-> libgcc>=4.4.0_1
+   SONAME: libhsa-runtime64.so.1 <-> rocr-runtime>=7.2.3_1
+   SONAME: libm.so.6 <-> glibc>=2.41_1
+   SONAME: libstdc++.so.6 <-> libstdc++>=4.4.0_1
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 05-generate-32bit-runtime-deps ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 06-verify-python-deps ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 90-set-timestamps ...
+=> rocm-opencl-7.2.3_1: setting mtimes to Tue May 26 07:56:40 PM UTC 2026
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 99-pkglint-subpkgs ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 99-pkglint ...
+=> rocm-opencl-7.2.3_1: running pre-pkg hook: 999-collected-rdeps ...
+   rocr-runtime>=0 rocm-llvm>=0 rocm-device-libs>=0 rocm-comgr>=0 ocl-icd>=0 glibc>=2.41_1 libgcc>=4.4.0_1 rocr-runtime>=7.2.3_1 libstdc++>=4.4.0_1 
+=> rocm-opencl-7.2.3_1: running do-pkg hook: 00-gen-pkg ...
+=> Creating rocm-opencl-7.2.3_1.x86_64.xbps for repository /host/binpkgs ...
+=> rocm-opencl-7.2.3_1: running post-pkg hook: 00-register-pkg ...
+=> Registering new packages to /host/binpkgs
+index: added `rocm-opencl-7.2.3_1' (x86_64).
+index: 9 packages registered.
+=> rocm-opencl-7.2.3_1: removing autodeps, please wait...
+=> rocm-opencl-7.2.3_1: cleaning build directory...
+=> rocm-opencl: removing files from destdir...

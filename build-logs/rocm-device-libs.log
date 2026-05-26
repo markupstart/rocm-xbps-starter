@@ -1,0 +1,889 @@
+=> xbps-src: updating repositories for host (x86_64)...
+[*] Updating repository `https://repo-default.voidlinux.org/current/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/nonfree/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/debug/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/nonfree/x86_64-repodata' ...
+=> xbps-src: updating software in / masterdir...
+=> xbps-src: cleaning up / masterdir...
+=> rocm-device-libs-7.2.3_1: removing autodeps, please wait...
+=> rocm-device-libs-7.2.3_1: building with [cmake] for x86_64...
+   [host] cmake-4.2.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] python3-3.14.5_1: found (https://repo-default.voidlinux.org/current)
+   [host] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [host] cmake-bootstrap-4.1.2_1: found (https://repo-default.voidlinux.org/current/bootstrap)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [target] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+=> rocm-device-libs-7.2.3_1: installing host dependencies: cmake-4.2.2_2 ninja-1.13.2_2 python3-3.14.5_1 rocm-llvm-7.2.3_1 cmake-bootstrap-4.1.2_1 ninja-1.13.2_2 ...
+=> rocm-device-libs-7.2.3_1: installing target dependencies: rocm-llvm-7.2.3_1 ...
+ERROR: Package `rocm-llvm-7.2.3_1' already installed.
+=> rocm-device-libs-7.2.3_1: running do-fetch hook: 00-distfiles ...
+=> rocm-device-libs-7.2.3_1: running do-extract hook: 00-distfiles ...
+=> rocm-device-libs-7.2.3_1: extracting distfile(s), please wait...
+=> rocm-device-libs-7.2.3_1: running do-patch hook: 00-patches ...
+=> rocm-device-libs-7.2.3_1: running pre-configure hook: 00-gnu-configure-asneeded ...
+=> rocm-device-libs-7.2.3_1: running pre-configure hook: 01-override-config ...
+=> rocm-device-libs-7.2.3_1: running pre-configure hook: 02-script-wrapper ...
+=> rocm-device-libs-7.2.3_1: running do_configure ...
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning at CMakeLists.txt:17 (find_package):
+  By not providing "FindROCmCMakeBuildTools.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "ROCmCMakeBuildTools", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "ROCmCMakeBuildTools" with any of the following names:
+
+    ROCmCMakeBuildToolsConfig.cmake
+    rocmcmakebuildtools-config.cmake
+
+  Add the installation prefix of "ROCmCMakeBuildTools" to CMAKE_PREFIX_PATH
+  or set "ROCmCMakeBuildTools_DIR" to a directory containing one of the above
+  files.  If "ROCmCMakeBuildTools" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+-- Linker detection: GNU ld
+-- FileCheck not found, not adding constant fold tests
+device-libs CPACK_RPM_PACKAGE_RELEASE now is local
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /builddir/rocm-device-libs-7.2.3/amd/device-libs/build
+=> rocm-device-libs-7.2.3_1: running pre-build hook: 02-script-wrapper ...
+=> rocm-device-libs-7.2.3_1: running do_build ...
+[1/693] Building CXX object utils/prepare-builtins/CMakeFiles/prepare-builtins.dir/prepare-builtins.cpp.o
+[2/693] Linking CXX executable utils/prepare-builtins/prepare-builtins
+[3/693] Generating correctly_rounded_sqrt_on.bc
+[4/693] Generating daz_opt_on.bc
+[5/693] Generating isa_version_1030.bc
+[6/693] Generating abi_version_400.bc
+[7/693] Generating correctly_rounded_sqrt_off.bc
+[8/693] Generating abi_version_500.bc
+[9/693] Generating abi_version_600.bc
+[10/693] Generating isa_version_1010.bc
+[11/693] Generating finite_only_on.bc
+[12/693] Generating isa_version_1012.bc
+[13/693] Generating daz_opt_off.bc
+[14/693] Generating isa_version_1011.bc
+[15/693] Generating isa_version_1013.bc
+[16/693] Generating isa_version_10-1-generic.bc
+[17/693] Generating finite_only_off.bc
+[18/693] Generating isa_version_10-3-generic.bc
+[19/693] Generating isa_version_1032.bc
+[20/693] Generating isa_version_1102.bc
+[21/693] Generating isa_version_11-generic.bc
+[22/693] Generating isa_version_1036.bc
+[23/693] Generating isa_version_1103.bc
+[24/693] Generating isa_version_1101.bc
+[25/693] Generating isa_version_1031.bc
+[26/693] Generating isa_version_1033.bc
+[27/693] Generating isa_version_1150.bc
+[28/693] Generating isa_version_1100.bc
+[29/693] Generating isa_version_1034.bc
+[30/693] Generating isa_version_1153.bc
+[31/693] Generating isa_version_1152.bc
+[32/693] Generating isa_version_1151.bc
+[33/693] Generating isa_version_1035.bc
+[34/693] Generating isa_version_1200.bc
+[35/693] Generating isa_version_12-generic.bc
+[36/693] Generating isa_version_1201.bc
+[37/693] Generating isa_version_600.bc
+[38/693] Generating isa_version_1250.bc
+[39/693] Generating isa_version_1251.bc
+[40/693] Generating isa_version_601.bc
+[41/693] Generating isa_version_602.bc
+[42/693] Generating isa_version_700.bc
+[43/693] Generating isa_version_702.bc
+[44/693] Generating isa_version_705.bc
+[45/693] Generating isa_version_703.bc
+[46/693] Generating isa_version_701.bc
+[47/693] Generating isa_version_802.bc
+[48/693] Generating isa_version_801.bc
+[49/693] Generating isa_version_704.bc
+[50/693] Generating isa_version_9-4-generic.bc
+[51/693] Generating isa_version_803.bc
+[52/693] Generating isa_version_805.bc
+[53/693] Generating isa_version_906.bc
+[54/693] Generating isa_version_900.bc
+[55/693] Generating isa_version_9-generic.bc
+[56/693] Generating isa_version_904.bc
+[57/693] Generating isa_version_909.bc
+[58/693] Generating isa_version_810.bc
+[59/693] Generating isa_version_942.bc
+[60/693] Generating isa_version_902.bc
+[61/693] Generating isa_version_908.bc
+[62/693] Generating isa_version_90a.bc
+[63/693] Generating isa_version_90c.bc
+[64/693] Generating isa_version_950.bc
+[65/693] Generating unsafe_math_off.bc
+[66/693] Generating wavefrontsize64_off.bc
+[67/693] Generating acosF.bc
+[68/693] Generating unsafe_math_on.bc
+[69/693] Generating acosH.bc
+[70/693] Generating acosD.bc
+[71/693] Generating acoshD.bc
+[72/693] Generating acoshF.bc
+[73/693] Generating acoshH.bc
+[74/693] Generating wavefrontsize64_on.bc
+[75/693] Generating acospiF.bc
+[76/693] Generating acospiD.bc
+[77/693] Generating addH.bc
+[78/693] Generating addF.bc
+[79/693] Generating asinD.bc
+[80/693] Generating asinH.bc
+[81/693] Generating addD.bc
+[82/693] Generating asinF.bc
+[83/693] Generating acospiH.bc
+[84/693] Generating asinhH.bc
+[85/693] Generating asinhF.bc
+[86/693] Generating asinhD.bc
+[87/693] Generating asinpiF.bc
+[88/693] Generating asinpiD.bc
+[89/693] Generating asinpiH.bc
+[90/693] Generating atan2D.bc
+[91/693] Generating atan2F.bc
+[92/693] Generating atan2H.bc
+[93/693] Generating atan2piF.bc
+[94/693] Generating atan2piD.bc
+[95/693] Generating atanF.bc
+[96/693] Generating atanD.bc
+[97/693] Generating atan2piH.bc
+[98/693] Generating atanH.bc
+[99/693] Generating atanhH.bc
+[100/693] Generating atanhF.bc
+[101/693] Generating atanhD.bc
+[102/693] Generating atanpiH.bc
+[103/693] Generating atanpiF.bc
+[104/693] Generating atanpiredF.bc
+[105/693] Generating atanpiredD.bc
+[106/693] Generating atanpiD.bc
+[107/693] Generating atanpiredH.bc
+[108/693] Generating atanredD.bc
+[109/693] Generating atanredF.bc
+[110/693] Generating ba0D.bc
+[111/693] Generating ba0F.bc
+[112/693] Generating ba1F.bc
+[113/693] Generating atanredH.bc
+[114/693] Generating bp0D.bc
+[115/693] Generating ba1D.bc
+[116/693] Generating bp0F.bc
+[117/693] Generating bp1D.bc
+[118/693] Generating cabsD.bc
+[119/693] Generating bp1F.bc
+[120/693] Generating cacosD.bc
+[121/693] Generating casinD.bc
+[122/693] Generating cacoshD.bc
+[123/693] Generating cacosF.bc
+[124/693] Generating casinF.bc
+[125/693] Generating cabsF.bc
+[126/693] Generating casinhD.bc
+[127/693] Generating catanD.bc
+[128/693] Generating cacoshF.bc
+[129/693] Generating catanF.bc
+[130/693] Generating casinhF.bc
+[131/693] Generating cbrtD.bc
+[132/693] Generating cbrtF.bc
+[133/693] Generating catanhD.bc
+[134/693] Generating cbrtH.bc
+[135/693] Generating ccosD.bc
+[136/693] Generating ccosF.bc
+[137/693] Generating ccoshF.bc
+[138/693] Generating cdivD.bc
+[139/693] Generating ccoshD.bc
+[140/693] Generating ceilF.bc
+[141/693] Generating ceilD.bc
+[142/693] Generating cexpD.bc
+[143/693] Generating catanhF.bc
+[144/693] Generating cexpF.bc
+[145/693] Generating cdivF.bc
+[146/693] Generating ceilH.bc
+[147/693] Generating clogF.bc
+[148/693] Generating clogD.bc
+[149/693] Generating copysignD.bc
+[150/693] Generating convert.bc
+[151/693] Generating copysignF.bc
+[152/693] Generating cosD.bc
+[153/693] Generating cosF.bc
+[154/693] Generating cosbD.bc
+[155/693] Generating cosH.bc
+[156/693] Generating copysignH.bc
+[157/693] Generating cosbF.bc
+[158/693] Generating coshD.bc
+[159/693] Generating cospiD.bc
+[160/693] Generating coshH.bc
+[161/693] Generating coshF.bc
+[162/693] Generating csinF.bc
+[163/693] Generating cospiH.bc
+[164/693] Generating csinD.bc
+[165/693] Generating cospiF.bc
+[166/693] Generating csinhF.bc
+[167/693] Generating csinhD.bc
+[168/693] Generating csqrtF.bc
+[169/693] Generating csqrtD.bc
+[170/693] Generating divD.bc
+[171/693] Generating ctanF.bc
+[172/693] Generating ctanD.bc
+[173/693] Generating divH.bc
+[174/693] Generating divF.bc
+[175/693] Generating ctanhD.bc
+[176/693] Generating ctanhF.bc
+[177/693] Generating epexpepF.bc
+[178/693] Generating epcsqrtepD.bc
+[179/693] Generating epexpepD.bc
+[180/693] Generating eplnD.bc
+[181/693] Generating erfF.bc
+[182/693] Generating epcsqrtepF.bc
+[183/693] Generating eplnF.bc
+[184/693] Generating erfcH.bc
+[185/693] Generating erfcF.bc
+[186/693] Generating erfD.bc
+[187/693] Generating erfcD.bc
+[188/693] Generating erfH.bc
+[189/693] Generating erfcinvD.bc
+[190/693] Generating erfcinvH.bc
+[191/693] Generating erfcinvF.bc
+[192/693] Generating erfcxD.bc
+[193/693] Generating erfcxF.bc
+[194/693] Generating erfinvD.bc
+[195/693] Generating erfcxH.bc
+[196/693] Generating exp10D.bc
+[197/693] Generating exp10F.bc
+[198/693] Generating erfinvF.bc
+[199/693] Generating exp10H.bc
+[200/693] Generating exp2D.bc
+[201/693] Generating expF.bc
+[202/693] Generating expD.bc
+[203/693] Generating exp2F.bc
+[204/693] Generating erfinvH.bc
+[205/693] Generating expH.bc
+[206/693] Generating exp2H.bc
+[207/693] Generating expepF.bc
+[208/693] Generating expepD.bc
+[209/693] Generating expm1F.bc
+[210/693] Generating expm1D.bc
+[211/693] Generating fabsD.bc
+[212/693] Generating expm1H.bc
+[213/693] Generating fabsF.bc
+[214/693] Generating fdimF.bc
+[215/693] Generating fdimH.bc
+[216/693] Generating floorF.bc
+[217/693] Generating floorD.bc
+[218/693] Generating fdimD.bc
+[219/693] Generating floorH.bc
+[220/693] Generating fmaF.bc
+[221/693] Generating fmaD.bc
+[222/693] Generating fmaH.bc
+[223/693] Generating fmaxD.bc
+[224/693] Generating fmaxF.bc
+[225/693] Generating fmaxH.bc
+[226/693] Generating fabsH.bc
+[227/693] Generating fminF.bc
+[228/693] Generating fminD.bc
+[229/693] Generating fmodF.bc
+[230/693] Generating fmodD.bc
+[231/693] Generating fminH.bc
+[232/693] Generating fmodH.bc
+[233/693] Generating fmuladdD.bc
+[234/693] Generating fmuladdH.bc
+[235/693] Generating fpclassifyD.bc
+[236/693] Generating fmuladdF.bc
+[237/693] Generating fractD.bc
+[238/693] Generating fpclassifyH.bc
+[239/693] Generating fractF.bc
+[240/693] Generating fpclassifyF.bc
+[241/693] Generating frexpH.bc
+[242/693] Generating frexpF.bc
+[243/693] Generating frexpD.bc
+[244/693] Generating fractH.bc
+[245/693] Generating hypotD.bc
+[246/693] Generating hypotH.bc
+[247/693] Generating hypotF.bc
+[248/693] Generating i0D.bc
+[249/693] Generating i0F.bc
+[250/693] Generating i0H.bc
+[251/693] Generating i1F.bc
+[252/693] Generating i1D.bc
+[253/693] Generating i1H.bc
+[254/693] Generating ilogbD.bc
+[255/693] Generating isfiniteF.bc
+[256/693] Generating ilogbF.bc
+[257/693] Generating ilogbH.bc
+[258/693] Generating isfiniteD.bc
+[259/693] Generating isfiniteH.bc
+[260/693] Generating isinfF.bc
+[261/693] Generating isinfD.bc
+[262/693] Generating isinfH.bc
+[263/693] Generating isnanD.bc
+[264/693] Generating isnanF.bc
+[265/693] Generating isnormalF.bc
+[266/693] Generating isnanH.bc
+[267/693] Generating isnormalD.bc
+[268/693] Generating j0D.bc
+[269/693] Generating isnormalH.bc
+[270/693] Generating j0H.bc
+[271/693] Generating j1H.bc
+[272/693] Generating j1D.bc
+[273/693] Generating j1F.bc
+[274/693] Generating j0F.bc
+[275/693] Generating ldexpF.bc
+[276/693] Generating ldexpD.bc
+[277/693] Generating ldexpH.bc
+[278/693] Generating len3D.bc
+[279/693] Generating len3F.bc
+[280/693] Generating len4F.bc
+[281/693] Generating len4D.bc
+[282/693] Generating len4H.bc
+[283/693] Generating lgammaF.bc
+[284/693] Generating len3H.bc
+[285/693] Generating lgammaD.bc
+[286/693] Generating lgammaH.bc
+[287/693] Generating lgamma_rD.bc
+[288/693] Generating lgamma_rH.bc
+[289/693] Generating lnepD.bc
+[290/693] Generating log10F.bc
+[291/693] Generating log10D.bc
+[292/693] Generating log10H.bc
+[293/693] Generating lnepF.bc
+[294/693] Generating log1pD.bc
+[295/693] Generating log1pF.bc
+[296/693] Generating lgamma_rF.bc
+[297/693] Generating log1pH.bc
+[298/693] Generating log2D.bc
+[299/693] Generating log2H.bc
+[300/693] Generating log2F.bc
+[301/693] Generating logD.bc
+[302/693] Generating logbD.bc
+[303/693] Generating logbF.bc
+[304/693] Generating logH.bc
+[305/693] Generating madF.bc
+[306/693] Generating madD.bc
+[307/693] Generating madH.bc
+[308/693] Generating maxD.bc
+[309/693] Generating logbH.bc
+[310/693] Generating logF.bc
+[311/693] Generating maxF.bc
+[312/693] Generating maxmagD.bc
+[313/693] Generating maxmagF.bc
+[314/693] Generating maxmagH.bc
+[315/693] Generating minD.bc
+[316/693] Generating minF.bc
+[317/693] Generating minH.bc
+[318/693] Generating minmagD.bc
+[319/693] Generating maxH.bc
+[320/693] Generating minmagF.bc
+[321/693] Generating modfD.bc
+[322/693] Generating minmagH.bc
+[323/693] Generating modfF.bc
+[324/693] Generating modfH.bc
+[325/693] Generating mulF.bc
+[326/693] Generating mulD.bc
+[327/693] Generating nanF.bc
+[328/693] Generating nanD.bc
+[329/693] Generating nativeD.bc
+[330/693] Generating mulH.bc
+[331/693] Generating nanH.bc
+[332/693] Generating nativeF.bc
+[333/693] Generating nativeH.bc
+[334/693] Generating native_expF.bc
+[335/693] Generating ncdfD.bc
+[336/693] Generating native_rsqrtH.bc
+[337/693] Generating native_logF.bc
+[338/693] Generating native_rcpH.bc
+[339/693] Generating ncdfH.bc
+[340/693] Generating ncdfF.bc
+[341/693] Generating ncdfinvF.bc
+[342/693] Generating ncdfinvH.bc
+[343/693] Generating nearbyintD.bc
+[344/693] Generating ncdfinvD.bc
+[345/693] Generating nextafterD.bc
+[346/693] Generating nearbyintF.bc
+[347/693] Generating nextafterH.bc
+[348/693] Generating nextafterF.bc
+[349/693] Generating powD.bc
+[350/693] Generating powH.bc
+[351/693] Generating nearbyintH.bc
+[352/693] Generating powF.bc
+[353/693] Generating pownD.bc
+[354/693] Generating pownH.bc
+[355/693] Generating powrD.bc
+[356/693] Generating predD.bc
+[357/693] Generating pownF.bc
+[358/693] Generating predF.bc
+[359/693] Generating rcbrtF.bc
+[360/693] Generating predH.bc
+[361/693] Generating powrF.bc
+[362/693] Generating rcbrtD.bc
+[363/693] Generating rcbrtH.bc
+[364/693] Generating remainderF.bc
+[365/693] Generating remquoD.bc
+[366/693] Generating remainderD.bc
+[367/693] Generating remquoF.bc
+[368/693] Generating remainderH.bc
+[369/693] Generating remquoH.bc
+[370/693] Generating powrH.bc
+[371/693] Generating rhypotF.bc
+[372/693] Generating rintD.bc
+[373/693] Generating rhypotH.bc
+[374/693] Generating rhypotD.bc
+[375/693] Generating rintF.bc
+[376/693] Generating rlen3F.bc
+[377/693] Generating rlen3D.bc
+[378/693] Generating rlen3H.bc
+[379/693] Generating rlen4D.bc
+[380/693] Generating rlen4F.bc
+[381/693] Generating rootnD.bc
+[382/693] Generating rlen4H.bc
+[383/693] Generating rootnF.bc
+[384/693] Generating rintH.bc
+[385/693] Generating rootnH.bc
+[386/693] Generating roundD.bc
+[387/693] Generating roundH.bc
+[388/693] Generating roundF.bc
+[389/693] Generating rsqrtD.bc
+[390/693] Generating rsqrtH.bc
+[391/693] Generating scalbF.bc
+[392/693] Generating scalbD.bc
+[393/693] Generating scalbH.bc
+[394/693] Generating scalbnD.bc
+[395/693] Generating rsqrtF.bc
+[396/693] Generating scalbnF.bc
+[397/693] Generating scalbnH.bc
+[398/693] Generating signbitD.bc
+[399/693] Generating signbitH.bc
+[400/693] Generating sinF.bc
+[401/693] Generating sinH.bc
+[402/693] Generating sinD.bc
+[403/693] Generating signbitF.bc
+[404/693] Generating sinbD.bc
+[405/693] Generating sinbF.bc
+[406/693] Generating sincosH.bc
+[407/693] Generating sincosD.bc
+[408/693] Generating sincosF.bc
+[409/693] Generating sincospiF.bc
+[410/693] Generating sincospiD.bc
+[411/693] Generating sincospiredD.bc
+[412/693] Generating sincospiH.bc
+[413/693] Generating sincospiredF.bc
+[414/693] Generating sincospiredH.bc
+[415/693] Generating sincosred2F.bc
+[416/693] Generating sincosredD.bc
+[417/693] Generating sincosred2D.bc
+[418/693] Generating sincosredH.bc
+[419/693] Generating sincosredF.bc
+[420/693] Generating sinhH.bc
+[421/693] Generating sinhF.bc
+[422/693] Generating sinpiF.bc
+[423/693] Generating sinpiD.bc
+[424/693] Generating sinhD.bc
+[425/693] Generating sqrtD.bc
+[426/693] Generating sqrtF.bc
+[427/693] Generating sqrtH.bc
+[428/693] Generating subD.bc
+[429/693] Generating sinpiH.bc
+[430/693] Generating subF.bc
+[431/693] Generating subH.bc
+[432/693] Generating succD.bc
+[433/693] Generating succF.bc
+[434/693] Generating tanD.bc
+[435/693] Generating tables.bc
+[436/693] Generating succH.bc
+[437/693] Generating tanhH.bc
+[438/693] Generating tanH.bc
+[439/693] Generating tanhD.bc
+[440/693] Generating tanhF.bc
+[441/693] Generating tanF.bc
+[442/693] Generating tanpiD.bc
+[443/693] Generating tanpiF.bc
+[444/693] Generating tanpiredH.bc
+[445/693] Generating tanpiredF.bc
+[446/693] Generating tanpiH.bc
+[447/693] Generating tanpiredD.bc
+[448/693] Generating tanred2D.bc
+[449/693] Generating tgammaD.bc
+[450/693] Generating tgammaF.bc
+[451/693] Generating tanredF.bc
+[452/693] Generating tgammaH.bc
+[453/693] Generating trigpiredD.bc
+[454/693] Generating trigredD.bc
+[455/693] Generating trigpiredH.bc
+[456/693] Generating trigpiredF.bc
+[457/693] Generating trigredF.bc
+[458/693] Generating tanredH.bc
+[459/693] Generating trigredH.bc
+[460/693] Generating trigredlargeD.bc
+[461/693] Generating trigredlargeF.bc
+[462/693] Generating trigredsmallF.bc
+[463/693] Generating truncD.bc
+[464/693] Generating trigredsmallD.bc
+[465/693] Generating truncF.bc
+[466/693] Generating truncH.bc
+[467/693] Generating y0F.bc
+[468/693] Generating y0D.bc
+[469/693] Generating y0H.bc
+[470/693] Generating activelane.bc
+[471/693] Generating add_sat.bc
+[472/693] Generating y1H.bc
+[473/693] Generating y1D.bc
+[474/693] Generating alrs.bc
+[475/693] Generating y1F.bc
+[476/693] Generating cluster.bc
+[477/693] Generating clz.bc
+[478/693] Generating cg.bc
+[479/693] Generating cprintf.bc
+[480/693] Generating gaaf.bc
+[481/693] Generating hostcall.bc
+[482/693] Generating ctz.bc
+[483/693] Generating hostcall_impl.bc
+[484/693] Generating dots.bc
+[485/693] Generating hsaqs.bc
+[486/693] Generating lane.bc
+[487/693] Generating readuplane.bc
+[488/693] Generating mtime.bc
+[489/693] Generating mul_hi.bc
+[490/693] Generating media.bc
+[491/693] Generating popcount.bc
+[492/693] Generating dm.bc
+[493/693] Generating mul24.bc
+[494/693] Generating sub_sat.bc
+[495/693] Generating image.bc
+[496/693] Generating services.bc
+[497/693] Generating wait.bc
+[498/693] Generating toas.bc
+[499/693] Generating wfbc.bc
+[500/693] Generating wfaas.bc
+[501/693] Generating prefetch.bc
+[502/693] Generating wgred.bc
+[503/693] Generating waitge.bc
+[504/693] Generating mix.bc
+[505/693] Generating degrees.bc
+[506/693] Generating fclamp.bc
+[507/693] Generating smoothstep.bc
+[508/693] Generating step.bc
+[509/693] Generating sign.bc
+[510/693] Generating workitem.bc
+[511/693] Generating events.bc
+[512/693] Generating getkern.bc
+[513/693] Generating enqueue.bc
+[514/693] Generating schedule_pal.bc
+[515/693] Generating schedule_rocm.bc
+[516/693] Generating awgcpy.bc
+[517/693] Generating ndrange.bc
+[518/693] Generating cross.bc
+[519/693] Generating fast_distance.bc
+[520/693] Generating fast_length.bc
+[521/693] Generating length.bc
+[522/693] Generating fast_normalize.bc
+[523/693] Generating normalize.bc
+[524/693] Generating isamp.bc
+[525/693] Generating dot.bc
+[526/693] Generating distance.bc
+[527/693] Generating abs.bc
+[528/693] Generating clz.bc
+[529/693] Generating imwrap.bc
+[530/693] Generating abs_diff.bc
+[531/693] Generating ctz.bc
+[532/693] Generating hadd.bc
+[533/693] Generating mad_hi.bc
+[534/693] Generating add_sat.bc
+[535/693] Generating mul24.bc
+[536/693] Generating mad24.bc
+[537/693] Generating max.bc
+[538/693] Generating mul_hi.bc
+[539/693] Generating min.bc
+[540/693] Generating iclamp.bc
+[541/693] Generating mad_sat.bc
+[542/693] Generating wfredscan.bc
+[543/693] Generating rhadd.bc
+[544/693] Generating rotate.bc
+[545/693] Generating upsample.bc
+[546/693] Generating popcount.bc
+[547/693] Generating sub_sat.bc
+[548/693] Generating halfred.bc
+[549/693] Generating halftr.bc
+[550/693] Generating halfmath.bc
+[551/693] Generating native.bc
+[552/693] Generating halfscr.bc
+[553/693] Generating wrapt.bc
+[554/693] Generating bfm.bc
+[555/693] Generating fmax3.bc
+[556/693] Generating wrapb.bc
+[557/693] Generating wrapu2.bc
+[558/693] Generating bitalign.bc
+[559/693] Generating wraptp.bc
+[560/693] Generating fmed3.bc
+[561/693] Generating bytealign.bc
+[562/693] Generating fmin3.bc
+[563/693] Generating wrapbs.bc
+[564/693] Generating ibfe.bc
+[565/693] Generating imed3.bc
+[566/693] Generating imax3.bc
+[567/693] Generating imin3.bc
+[568/693] Generating lerp.bc
+[569/693] Generating sad4.bc
+[570/693] Generating mqsad.bc
+[571/693] Generating msad.bc
+[572/693] Generating pack.bc
+[573/693] Generating qsad.bc
+[574/693] Generating sad.bc
+[575/693] Generating sadhi.bc
+[576/693] Generating wrapu.bc
+[577/693] Generating sadd.bc
+[578/693] Generating umax3.bc
+[579/693] Generating ubfe.bc
+[580/693] Generating umed3.bc
+[581/693] Generating sadw.bc
+[582/693] Generating umin3.bc
+[583/693] Generating unpack.bc
+[584/693] Generating asqf.bc
+[585/693] Generating awif.bc
+[586/693] Generating workitem.bc
+[587/693] Generating amdblit.bc
+[588/693] Generating wrapbp.bc
+[589/693] Generating commitp.bc
+[590/693] Generating getp.bc
+[591/693] Generating reservep.bc
+[592/693] Generating wresvnp.bc
+[593/693] Generating validp.bc
+[594/693] Generating readp.bc
+[595/693] Generating writep.bc
+[596/693] Generating bselect.bc
+[597/693] Generating select.bc
+[598/693] Generating anyall.bc
+[599/693] Generating atom.bc
+[600/693] Generating subbar.bc
+[601/693] Generating suballany.bc
+[602/693] Generating shuffle.bc
+[603/693] Generating subget.bc
+[604/693] Generating subbcast.bc
+[605/693] Generating wganyall.bc
+[606/693] Generating predicates.bc
+[607/693] Generating wgbarrier.bc
+[608/693] Generating subredscan.bc
+[609/693] Generating wgbcast.bc
+[610/693] Generating ../amdgcn/bitcode/oclc_abi_version_500.bc
+[611/693] Generating ../amdgcn/bitcode/oclc_abi_version_400.bc
+[612/693] Generating empty.bc
+[613/693] Generating ../amdgcn/bitcode/oclc_abi_version_600.bc
+[614/693] Generating ../amdgcn/bitcode/oclc_correctly_rounded_sqrt_off.bc
+[615/693] Generating ../amdgcn/bitcode/oclc_daz_opt_on.bc
+[616/693] Generating ../amdgcn/bitcode/oclc_finite_only_off.bc
+[617/693] Generating ../amdgcn/bitcode/oclc_correctly_rounded_sqrt_on.bc
+[618/693] Generating ../amdgcn/bitcode/oclc_daz_opt_off.bc
+[619/693] Generating wgreduce.bc
+[620/693] Generating ../amdgcn/bitcode/oclc_finite_only_on.bc
+[621/693] Generating ../amdgcn/bitcode/oclc_isa_version_10-3-generic.bc
+[622/693] Generating ../amdgcn/bitcode/oclc_isa_version_10-1-generic.bc
+[623/693] Generating cxxa.bc
+[624/693] Generating ../amdgcn/bitcode/oclc_isa_version_1010.bc
+[625/693] Generating ../amdgcn/bitcode/oclc_isa_version_1011.bc
+[626/693] Generating ../amdgcn/bitcode/oclc_isa_version_1012.bc
+[627/693] Generating ../amdgcn/bitcode/oclc_isa_version_1013.bc
+[628/693] Generating wgscan.bc
+[629/693] Generating ../amdgcn/bitcode/oclc_isa_version_1031.bc
+[630/693] Generating memintrinsics.bc
+[631/693] Generating ../amdgcn/bitcode/oclc_isa_version_1030.bc
+[632/693] Generating ../amdgcn/bitcode/oclc_isa_version_1034.bc
+[633/693] Generating dm.bc
+[634/693] Generating vldst_half.bc
+[635/693] Generating ../amdgcn/bitcode/oclc_isa_version_1035.bc
+[636/693] Generating ../amdgcn/bitcode/oclc_isa_version_1033.bc
+[637/693] Generating globals.bc
+[638/693] Generating ../amdgcn/bitcode/oclc_isa_version_1032.bc
+[639/693] Generating ../amdgcn/bitcode/oclc_isa_version_1036.bc
+[640/693] Generating ../amdgcn/bitcode/oclc_isa_version_11-generic.bc
+[641/693] Generating report.bc
+[642/693] Generating ../amdgcn/bitcode/oclc_isa_version_1102.bc
+[643/693] Generating ../amdgcn/bitcode/oclc_isa_version_1100.bc
+[644/693] Generating ../amdgcn/bitcode/oclc_isa_version_1101.bc
+[645/693] Generating ../amdgcn/bitcode/oclc_isa_version_1103.bc
+[646/693] Generating ../amdgcn/bitcode/oclc_isa_version_1151.bc
+[647/693] Generating vldst_gen.bc
+[648/693] Generating ../amdgcn/bitcode/oclc_isa_version_1152.bc
+[649/693] Generating ../amdgcn/bitcode/oclc_isa_version_12-generic.bc
+[650/693] Generating ../amdgcn/bitcode/oclc_isa_version_1150.bc
+[651/693] Generating ../amdgcn/bitcode/oclc_isa_version_1153.bc
+[652/693] Generating ../amdgcn/bitcode/oclc_isa_version_1200.bc
+[653/693] Generating ../amdgcn/bitcode/oclc_isa_version_1201.bc
+[654/693] Generating ../amdgcn/bitcode/oclc_isa_version_1250.bc
+[655/693] Generating ../amdgcn/bitcode/oclc_isa_version_1251.bc
+[656/693] Generating ../amdgcn/bitcode/oclc_isa_version_600.bc
+[657/693] Generating ../amdgcn/bitcode/oclc_isa_version_701.bc
+[658/693] Generating ../amdgcn/bitcode/oclc_isa_version_702.bc
+[659/693] Generating ../amdgcn/bitcode/oclc_isa_version_601.bc
+[660/693] Generating ../amdgcn/bitcode/oclc_isa_version_700.bc
+[661/693] Generating ../amdgcn/bitcode/oclc_isa_version_704.bc
+[662/693] Generating ../amdgcn/bitcode/oclc_isa_version_602.bc
+[663/693] Generating ../amdgcn/bitcode/oclc_isa_version_703.bc
+[664/693] Generating ../amdgcn/bitcode/oclc_isa_version_705.bc
+[665/693] Generating stubs.bc
+[666/693] Generating ../amdgcn/bitcode/oclc_isa_version_802.bc
+[667/693] Generating ../amdgcn/bitcode/oclc_isa_version_801.bc
+[668/693] Generating ../amdgcn/bitcode/oclc_isa_version_805.bc
+[669/693] Generating ../amdgcn/bitcode/oclc_isa_version_900.bc
+[670/693] Generating ../amdgcn/bitcode/oclc_isa_version_803.bc
+[671/693] Generating ../amdgcn/bitcode/oclc_isa_version_9-4-generic.bc
+[672/693] Generating ../amdgcn/bitcode/oclc_isa_version_9-generic.bc
+[673/693] Generating ../amdgcn/bitcode/oclc_isa_version_810.bc
+[674/693] Generating ../amdgcn/bitcode/oclc_isa_version_902.bc
+[675/693] Generating ../amdgcn/bitcode/oclc_isa_version_904.bc
+[676/693] Generating ../amdgcn/bitcode/oclc_isa_version_906.bc
+[677/693] Generating ../amdgcn/bitcode/oclc_isa_version_909.bc
+[678/693] Generating ../amdgcn/bitcode/oclc_isa_version_90a.bc
+[679/693] Generating shadow_mapping.bc
+[680/693] Generating ../amdgcn/bitcode/oclc_isa_version_90c.bc
+[681/693] Generating ../amdgcn/bitcode/oclc_isa_version_942.bc
+[682/693] Generating ../amdgcn/bitcode/oclc_isa_version_908.bc
+[683/693] Generating ../amdgcn/bitcode/oclc_unsafe_math_off.bc
+[684/693] Generating ../amdgcn/bitcode/oclc_wavefrontsize64_off.bc
+[685/693] Generating ../amdgcn/bitcode/oclc_isa_version_950.bc
+[686/693] Generating ../amdgcn/bitcode/oclc_unsafe_math_on.bc
+[687/693] Generating ../amdgcn/bitcode/hip.bc
+[688/693] Generating ../amdgcn/bitcode/oclc_wavefrontsize64_on.bc
+[689/693] Generating ../amdgcn/bitcode/asanrtl.bc
+[690/693] Generating ../amdgcn/bitcode/ockl.bc
+[691/693] Generating ../amdgcn/bitcode/ocml.bc
+[692/693] Generating conversions.bc
+[693/693] Generating ../amdgcn/bitcode/opencl.bc
+=> rocm-device-libs-7.2.3_1: skipping check (XBPS_CHECK_PKGS is disabled) ...
+=> rocm-device-libs-7.2.3_1: running pre-install hook: 00-libdir ...
+=> rocm-device-libs-7.2.3_1: running pre-install hook: 02-script-wrapper ...
+=> rocm-device-libs-7.2.3_1: running pre-install hook: 98-fixup-gir-path ...
+=> rocm-device-libs-7.2.3_1: running do_install ...
+[0/1] Install the project...
+-- Install configuration: "Release"
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/lib64/cmake/AMDDeviceLibs/AMDDeviceLibsConfig.cmake
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/share/doc/rocm-device-libs/LICENSE.TXT
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_abi_version_400.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_abi_version_500.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_abi_version_600.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_correctly_rounded_sqrt_off.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_correctly_rounded_sqrt_on.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_daz_opt_off.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_daz_opt_on.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_finite_only_off.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_finite_only_on.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_10-1-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_10-3-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1010.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1011.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1012.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1013.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1030.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1031.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1032.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1033.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1034.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1035.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1036.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_11-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1100.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1101.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1102.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1103.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1150.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1151.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1152.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1153.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_12-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1200.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1201.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1250.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_1251.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_600.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_601.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_602.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_700.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_701.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_702.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_703.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_704.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_705.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_801.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_802.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_803.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_805.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_810.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_9-4-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_9-generic.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_900.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_902.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_904.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_906.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_908.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_909.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_90a.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_90c.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_942.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_isa_version_950.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_unsafe_math_off.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_unsafe_math_on.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_wavefrontsize64_off.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/oclc_wavefrontsize64_on.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/ocml.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/ockl.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/opencl.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/hip.bc
+-- Installing: /destdir/rocm-device-libs-7.2.3/usr/amdgcn/bitcode/asanrtl.bc
+=> rocm-device-libs-7.2.3_1: running post-install hook: 00-compress-info-files ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 00-fixup-gir-path ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 00-libdir ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 00-uncompress-manpages ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 01-remove-misc ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 02-remove-libtool-archives ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 02-remove-perl-files ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 02-remove-python-bytecode-files ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 03-remove-empty-dirs ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 04-create-xbps-metadata-scripts ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 05-generate-gitrevs ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 06-strip-and-debug-pkgs ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 10-pkglint-devel-paths ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 11-pkglint-elf-in-usrshare ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 12-rename-python3-c-bindings ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 13-pkg-config-clean-xbps-cross-base-ref ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 14-fix-permissions ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 15-qt-private-api ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 80-prepare-32bit ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 98-shlib-provides ...
+=> rocm-device-libs-7.2.3_1: running post-install hook: 99-pkglint-warn-cross-cruft ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 03-restrict-py3-version ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 03-rewrite-python-shebang ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 04-generate-provides ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 04-generate-runtime-deps ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 05-generate-32bit-runtime-deps ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 06-verify-python-deps ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 90-set-timestamps ...
+=> rocm-device-libs-7.2.3_1: setting mtimes to Tue May 26 03:08:43 AM UTC 2026
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 99-pkglint-subpkgs ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 99-pkglint ...
+=> rocm-device-libs-7.2.3_1: running pre-pkg hook: 999-collected-rdeps ...
+   rocm-llvm>=0 
+=> rocm-device-libs-7.2.3_1: running do-pkg hook: 00-gen-pkg ...
+=> Creating rocm-device-libs-7.2.3_1.x86_64.xbps for repository /host/binpkgs ...
+=> rocm-device-libs-7.2.3_1: running post-pkg hook: 00-register-pkg ...
+=> Registering new packages to /host/binpkgs
+index: added `rocm-device-libs-7.2.3_1' (x86_64).
+index: 9 packages registered.
+=> rocm-device-libs-7.2.3_1: removing autodeps, please wait...
+=> rocm-device-libs-7.2.3_1: cleaning build directory...
+=> rocm-device-libs: removing files from destdir...

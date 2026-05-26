@@ -1,0 +1,617 @@
+=> xbps-src: updating repositories for host (x86_64)...
+[*] Updating repository `https://repo-default.voidlinux.org/current/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/nonfree/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/debug/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/nonfree/x86_64-repodata' ...
+=> xbps-src: updating software in / masterdir...
+=> xbps-src: cleaning up / masterdir...
+=> hip-runtime-amd-7.2.3_1: removing autodeps, please wait...
+=> hip-runtime-amd-7.2.3_1: building with [cmake] for x86_64...
+   [host] cmake-4.2.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] pkg-config-0.29.2_3: found (https://repo-default.voidlinux.org/current)
+   [host] python3-3.14.5_1: found (https://repo-default.voidlinux.org/current)
+   [host] perl-5.42.2_1: found (https://repo-default.voidlinux.org/current)
+   [host] rocm-cmake-7.2.3_1: found (/host/binpkgs)
+   [host] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [host] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+   [host] cmake-bootstrap-4.1.2_1: found (https://repo-default.voidlinux.org/current/bootstrap)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [target] rocr-runtime-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+   [target] libglvnd-devel-1.7.0_1: found (https://repo-default.voidlinux.org/current)
+   [runtime] rocr-runtime-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-comgr-7.2.3_1: found (/host/binpkgs)
+=> hip-runtime-amd-7.2.3_1: installing host dependencies: cmake-4.2.2_2 ninja-1.13.2_2 pkg-config-0.29.2_3 python3-3.14.5_1 perl-5.42.2_1 rocm-cmake-7.2.3_1 rocm-llvm-7.2.3_1 rocm-comgr-7.2.3_1 cmake-bootstrap-4.1.2_1 ninja-1.13.2_2 ...
+=> hip-runtime-amd-7.2.3_1: installing target dependencies: rocr-runtime-7.2.3_1 rocm-llvm-7.2.3_1 rocm-device-libs-7.2.3_1 rocm-comgr-7.2.3_1 libglvnd-devel-1.7.0_1 ...
+ERROR: Package `rocm-llvm-7.2.3_1' already installed.
+ERROR: Package `rocm-device-libs-7.2.3_1' already installed.
+ERROR: Package `rocm-comgr-7.2.3_1' already installed.
+=> hip-runtime-amd-7.2.3_1: running do-fetch hook: 00-distfiles ...
+=> hip-runtime-amd-7.2.3_1: running do-extract hook: 00-distfiles ...
+=> hip-runtime-amd-7.2.3_1: extracting distfile(s), please wait...
+=> hip-runtime-amd-7.2.3_1: running post_extract ...
+=> hip-runtime-amd-7.2.3_1: running do-patch hook: 00-patches ...
+=> hip-runtime-amd-7.2.3_1: running pre-configure hook: 00-gnu-configure-asneeded ...
+=> hip-runtime-amd-7.2.3_1: running pre-configure hook: 01-override-config ...
+=> hip-runtime-amd-7.2.3_1: running pre-configure hook: 02-script-wrapper ...
+=> hip-runtime-amd-7.2.3_1: running pre_configure ...
+=> hip-runtime-amd-7.2.3_1: running do_configure ...
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- HIP Common Directory: /builddir/hip-runtime-amd-7.2.3/hip-rocm-7.2.3
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found AMD_OPENCL: /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/opencl/khronos/headers/opencl2.2/CL
+-- Could NOT find Git (missing: GIT_EXECUTABLE) 
+CMake Warning at rocclr/cmake/ROCclrLC.cmake:21 (find_package):
+  Could not find a configuration file for package "amd_comgr" that is
+  compatible with requested version "2.9".
+
+  The following configuration files were considered but not accepted:
+
+    /usr/lib/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /usr/lib64/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /lib/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+    /lib64/cmake/amd_comgr/amd_comgr-config.cmake, version: 3.0.0
+      The version found is not compatible with the version requested.
+
+Call Stack (most recent call first):
+  rocclr/cmake/ROCclr.cmake:138 (include)
+  rocclr/CMakeLists.txt:28 (include)
+
+
+-- Found OpenGL: /usr/lib/libOpenGL.so
+-- HIPCC_BIN_DIR found at /opt/rocm/bin
+-- HIP_COMMON_DIR found at /builddir/hip-runtime-amd-7.2.3/hip-rocm-7.2.3
+-- HIPNV_DIR found at 
+-- Found Perl: /usr/bin/perl (found version "5.42.2")
+-- Could NOT find Git (missing: GIT_EXECUTABLE) 
+-- Using HIP version from VERSION file: 7.2.53211
+-- Using CPACK_DEBIAN_PACKAGE_RELEASE local
+-- CPACK_RPM_PACKAGE_RELEASE: local
+-- HIP Platform: amd
+-- HIP Runtime: rocclr
+-- HIP Compiler: clang
+-- ROCM Installation path(ROCM_PATH): /opt/rocm
+-- HIP will be installed in: /usr
+'sh' '-c' '/builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/hipamd/src/hip_embed_pch.sh /builddir/hip-runtime-amd-7.2.3/hip-rocm-7.2.3/include /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/include /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/hipamd/include /usr/lib64/cmake/llvm/../../..'
++ /usr/lib64/cmake/llvm/../../../bin/clang -O3 --hip-path=/builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/include/.. -std=c++17 -nogpulib -isystem /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/include -isystem /builddir/hip-runtime-amd-7.2.3/hip-rocm-7.2.3/include -isystem /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/hipamd/include --cuda-device-only --cuda-gpu-arch=gfx1030 -x hip /tmp/hip_pch.27253/hip_pch.h -E
++ cat /tmp/hip_pch.27253/hip_macros.h
++ /usr/lib64/cmake/llvm/../../../bin/clang -cc1 -O3 -emit-pch -triple amdgcn-amd-amdhsa -aux-triple x86_64-unknown-linux-gnu -fcuda-is-device -std=c++17 -fgnuc-version=4.2.1 -o /tmp/hip_pch.27253/hip_wave32.pch -x hip-cpp-output -
++ /usr/lib64/cmake/llvm/../../../bin/clang -O3 --hip-path=/builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/include/.. -std=c++17 -nogpulib -isystem /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/include -isystem /builddir/hip-runtime-amd-7.2.3/hip-rocm-7.2.3/include -isystem /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/hipamd/include --cuda-device-only -x hip /tmp/hip_pch.27253/hip_pch.h -E
++ cat /tmp/hip_pch.27253/hip_macros.h
++ /usr/lib64/cmake/llvm/../../../bin/clang -cc1 -O3 -emit-pch -triple amdgcn-amd-amdhsa -aux-triple x86_64-unknown-linux-gnu -fcuda-is-device -std=c++17 -fgnuc-version=4.2.1 -o /tmp/hip_pch.27253/hip_wave64.pch -x hip-cpp-output -
++ /usr/lib64/cmake/llvm/../../../bin/llvm-mc -o hip_pch.o /tmp/hip_pch.27253/hip_pch.mcin --filetype=obj
++ rm -rf /tmp/hip_pch.27253
+-- Configuring done (1.5s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    AMDGPU_TARGETS
+    BUILD_TESTING
+
+
+-- Build files have been written to: /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build
+=> hip-runtime-amd-7.2.3_1: running pre-build hook: 02-script-wrapper ...
+=> hip-runtime-amd-7.2.3_1: running do_build ...
+[1/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/blitcl.cpp.o
+[2/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os_win32.cpp.o
+[3/91] Generating hip_rtc_gen/hipRTC
+-- Appending hiprtc macros to /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/build/hipamd/src/hiprtc/hip_rtc_gen/hipRTC.
+[4/91] Generating hip_rtc_gen/hipRTC_header.o
+[5/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhcmessages.cpp.o
+[6/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/alloc.cpp.o
+[7/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os.cpp.o
+[8/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/appprofile.cpp.o
+[9/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/comgrctx.cpp.o
+[10/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/os/os_posix.cpp.o
+[11/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhcprintf.cpp.o
+[12/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devhostcall.cpp.o
+[13/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/activity.cpp.o
+[14/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/ndrange.cpp.o
+[15/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/agent.cpp.o
+[16/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/blit.cpp.o
+[17/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/context.cpp.o
+[18/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/thread/thread.cpp.o
+In file included from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/include/top.hpp:57,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.hpp:24,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:21:
+In member function 'void std::atomic<_Tp>::store(_Tp, std::memory_order) [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:150:25,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/atomic:284:23: warning: 'void __atomic_store_4(volatile void*, unsigned int, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  284 |         __atomic_store(std::__addressof(_M_i),
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+  285 |                        __atomic_impl::__clear_padding(__i),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  286 |                        int(__m));
+      |                        ~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In file included from /usr/include/c++/14.2/atomic:50:
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'bool amd::Thread::start(void*)' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:107:29:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'bool amd::Thread::start(void*)':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'void amd::Thread::resume()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'void amd::Thread::resume()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function 'void std::atomic<_Tp>::store(_Tp, std::memory_order) [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:150:25,
+    inlined from 'void amd::Thread::resume()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:115:27:
+/usr/include/c++/14.2/atomic:284:23: warning: 'void __atomic_store_4(volatile void*, unsigned int, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  284 |         __atomic_store(std::__addressof(_M_i),
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+  285 |                        __atomic_impl::__clear_padding(__i),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  286 |                        int(__m));
+      |                        ~~~~~~~~~
+In member function 'void amd::Thread::resume()':
+cc1plus: note: destination object is likely at address zero
+In member function '_Tp std::atomic<_Tp>::load(std::memory_order) const [with _Tp = amd::Monitor::notifyState]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:148:26,
+    inlined from 'void* amd::Thread::main()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:75:29:
+/usr/include/c++/14.2/atomic:302:22: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  302 |         __atomic_load(std::__addressof(_M_i), __ptr, int(__m));
+      |         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In member function 'void* amd::Thread::main()':
+cc1plus: note: destination object is likely at address zero
+In member function 'std::__atomic_base<_IntTp>::__int_type std::__atomic_base<_IntTp>::load(std::memory_order) const [with _ITp = int]',
+    inlined from 'void amd::Monitor::notify()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/monitor.hpp:149:20,
+    inlined from 'void* amd::Thread::main()' at /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/thread/thread.cpp:75:29:
+/usr/include/c++/14.2/bits/atomic_base.h:501:31: warning: 'unsigned int __atomic_load_4(const volatile void*, int)' writing 4 bytes into a region of size 0 overflows the destination [-Wstringop-overflow=]
+  501 |         return __atomic_load_n(&_M_i, int(__m));
+      |                ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In member function 'void* amd::Thread::main()':
+cc1plus: note: destination object is likely at address zero
+[19/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/kernel.cpp.o
+[20/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/utils/debug.cpp.o
+[21/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/commandqueue.cpp.o
+[22/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocblitcl.cpp.o
+[23/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/vmheap.cpp.o
+[24/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devkernel.cpp.o
+[25/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/command.cpp.o
+[26/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocrctx.cpp.o
+[27/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/device.cpp.o
+[28/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/utils/flags.cpp.o
+[29/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/runtime.cpp.o
+[30/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/elf/elf.cpp.o
+[31/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/interop_gl.cpp.o
+[32/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocappprofile.cpp.o
+[33/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/memory.cpp.o
+[34/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocurilocator.cpp.o
+[35/91] Linking CXX shared library hipamd/lib/libhiprtc-builtins.so.7.2.53211
+[36/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/platform/program.cpp.o
+[37/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_activity.cpp.o
+[38/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/devprogram.cpp.o
+/builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/device/devprogram.cpp: In member function 'bool amd::device::Program::compileToLLVMBitcode(amd_comgr_data_set_t, const std::vector<std::__cxx11::basic_string<char> >&, amd::option::Options*, char**, size_t*, bool)':
+/builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/device/devprogram.cpp:364:38: warning: 'AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS' is deprecated: Will be removed in Comgr v4.0. Currently the action    is a no-op, as the OpenCL pre-compiled headers are no longer used. [-Wdeprecated-declarations]
+  364 |       status = amd::Comgr::do_action(AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS, action, input,
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/device/devprogram.hpp:26,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/device/device.hpp:34,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/platform/context.hpp:25,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/platform/command.hpp:29,
+                 from /builddir/hip-runtime-amd-7.2.3/clr-rocm-7.2.3/rocclr/device/devprogram.cpp:21:
+/usr/include/amd_comgr/amd_comgr.h:1617:3: note: declared here
+ 1617 |   AMD_COMGR_ACTION_ADD_PRECOMPILED_HEADERS
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[39/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocglinterop.cpp.o
+[40/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/roccounters.cpp.o
+[41/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rockernel.cpp.o
+[42/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocprogram.cpp.o
+[43/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocsettings.cpp.o
+[44/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocsignal.cpp.o
+[45/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocprintf.cpp.o
+[46/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/compiler/lib/utils/options.cpp.o
+[47/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocmemory.cpp.o
+[48/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocblit.cpp.o
+[49/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_error.cpp.o
+[50/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_event_ipc.cpp.o
+[51/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocdevice.cpp.o
+[52/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_global.cpp.o
+[53/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_code_object.cpp.o
+[54/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_intercept.cpp.o
+[55/91] Building CXX object rocclr/CMakeFiles/rocclr.dir/device/rocm/rocvirtual.cpp.o
+[56/91] Linking CXX static library rocclr/librocclr.a
+[57/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_fatbin.cpp.o
+[58/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_device.cpp.o
+[59/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_context.cpp.o
+[60/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_event.cpp.o
+[61/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_profile.cpp.o
+[62/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_mempool_impl.cpp.o
+[63/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_hmm.cpp.o
+[64/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_storage.cpp.o
+[65/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_device_runtime.cpp.o
+[66/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_table_interface_c.cpp.o
+[67/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_table_interface.cpp.o
+[68/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_graph_internal.cpp.o
+[69/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_stream_ops.cpp.o
+[70/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_surface.cpp.o
+[71/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_peer.cpp.o
+[72/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_mempool.cpp.o
+[73/91] Creating library symlink hipamd/lib/libhiprtc-builtins.so.7 hipamd/lib/libhiprtc-builtins.so
+[74/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_api_trace.cpp.o
+[75/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_platform.cpp.o
+[76/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_comgr_helper.cpp.o
+[77/91] Building CXX object hipamd/src/hiprtc/CMakeFiles/hiprtc.dir/hiprtcInternal.cpp.o
+[78/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_vm.cpp.o
+[79/91] Building CXX object hipamd/src/hiprtc/CMakeFiles/hiprtc.dir/__/hip_comgr_helper.cpp.o
+[80/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_gl.cpp.o
+[81/91] Building CXX object hipamd/src/hiprtc/CMakeFiles/hiprtc.dir/hiprtc.cpp.o
+[82/91] Linking CXX shared library hipamd/lib/libhiprtc.so.7.2.53211
+[83/91] Creating library symlink hipamd/lib/libhiprtc.so.7 hipamd/lib/libhiprtc.so
+[84/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_library.cpp.o
+[85/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_module.cpp.o
+[86/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_stream.cpp.o
+[87/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_texture.cpp.o
+[88/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_memory.cpp.o
+[89/91] Building CXX object hipamd/src/CMakeFiles/amdhip64.dir/hip_graph.cpp.o
+[90/91] Linking CXX shared library hipamd/lib/libamdhip64.so.7.2.53211
+[91/91] Creating library symlink hipamd/lib/libamdhip64.so.7 hipamd/lib/libamdhip64.so
+=> hip-runtime-amd-7.2.3_1: skipping check (XBPS_CHECK_PKGS is disabled) ...
+=> hip-runtime-amd-7.2.3_1: running pre-install hook: 00-libdir ...
+=> hip-runtime-amd-7.2.3_1: running pre-install hook: 02-script-wrapper ...
+=> hip-runtime-amd-7.2.3_1: running pre-install hook: 98-fixup-gir-path ...
+=> hip-runtime-amd-7.2.3_1: running do_install ...
+[1/5] Linking CXX shared library hipamd/lib/libhiprtc.so.7.2.53211
+[2/5] Creating library symlink hipamd/lib/libhiprtc.so.7 hipamd/lib/libhiprtc.so
+[3/5] Linking CXX shared library hipamd/lib/libamdhip64.so.7.2.53211
+[4/5] Creating library symlink hipamd/lib/libamdhip64.so.7 hipamd/lib/libamdhip64.so
+[4/5] Install the project...
+-- Install configuration: "Release"
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/.hipInfo
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/share/hip/version
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/hipcc_cmake_linker_helper
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/hipdemangleatp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_channel_descriptor.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_device_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_atomic.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_bf16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_bfloat16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_common.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_complex.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_cooperative_groups.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_fp16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_fp4.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_fp6.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_fp8.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_gl_interop.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_math_constants.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_mx_common.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_ocp_fp.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_ocp_fp_cxx.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_ocp_host.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_ocp_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_runtime.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_runtime_pt_api.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_unsafe_atomics.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_hip_vector_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_math_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_surface_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_warp_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/amd_warp_sync_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/concepts.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/device_library_decls.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/functional_grid_launch.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/grid_launch.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/grid_launch.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/grid_launch_GGL.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/helpers.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_api_trace.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_assert.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_cooperative_groups_helper.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_fp16_gcc.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_fp16_math_fwd.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_ldg.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_prof_str.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_runtime_prof.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hip_storage.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/host_defines.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/hsa_helpers.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/macro_based_grid_launch.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/math_fwd.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/ockl_image.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/program_state.hpp
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/texture_fetch_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/amd_detail/texture_indirect_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//channel_descriptor.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//device_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//driver_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_bf16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_bfloat16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_common.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_complex.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_cooperative_groups.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_deprecated.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_ext.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_ext_ocp.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_fp16.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_fp4.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_fp6.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_fp8.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_gl_interop.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_hcc.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_math_constants.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_profile.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_runtime.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_runtime_api.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_texture_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hip_vector_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//hiprtc.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//library_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//linker_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//math_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//surface_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip//texture_types.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP/run_hipcc.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP/run_make2cmake.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_prof_str.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./bin
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/roc-obj
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/roc-obj-extract
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/roc-obj-extract.bat
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/roc-obj-ls
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/./bin/roc-obj-ls.bat
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/hip_version.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-amd.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-nvidia.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-version.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7.2.53211
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-targets.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-targets-release.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7.2.53211
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-targets.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-targets-release.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-config.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-config-version.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so.7.2.53211
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so.7
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so.7.2.53211
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so.7
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-targets.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-targets-release.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/hiprtc.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/hip_common.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-config.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-config-version.cmake
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/share/doc/hip/LICENSE.md
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/share/doc/hip-asan/LICENSE.md
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7.2.53211
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so.7
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libamdhip64.so
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so.7.2.53211
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so.7
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc.so
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so.7.2.53211
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so.7
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/libhiprtc-builtins.so
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/.hipInfo
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-targets.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-targets-release.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-config.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-config-version.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-targets.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip-lang/hip-lang-targets-release.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-config.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-config-version.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-targets.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hiprtc/hiprtc-targets-release.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/bin/hipcc_cmake_linker_helper
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/bin/hipdemangleatp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/bin/roc-obj
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/bin/roc-obj-extract
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/bin/roc-obj-ls
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/channel_descriptor.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/device_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/driver_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_bf16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_bfloat16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_common.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_complex.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_cooperative_groups.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_deprecated.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_ext.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_ext_ocp.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_fp16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_fp4.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_fp6.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_fp8.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_gl_interop.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_hcc.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_math_constants.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_profile.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_runtime.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_runtime_api.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_texture_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hip_vector_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/hiprtc.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/library_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/linker_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/math_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/surface_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/./include/hip/texture_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_channel_descriptor.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_device_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_atomic.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_bf16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_bfloat16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_common.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_complex.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_cooperative_groups.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_fp16.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_fp4.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_fp6.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_fp8.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_gl_interop.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_math_constants.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_mx_common.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_ocp_fp.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_ocp_fp_cxx.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_ocp_host.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_ocp_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_runtime.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_runtime_pt_api.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_unsafe_atomics.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_hip_vector_types.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_math_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_surface_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_warp_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/amd_warp_sync_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/concepts.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/device_library_decls.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/functional_grid_launch.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/grid_launch.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/grid_launch.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/grid_launch_GGL.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/helpers.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_api_trace.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_assert.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_cooperative_groups_helper.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_fp16_gcc.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_fp16_math_fwd.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_ldg.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_prof_str.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_runtime_prof.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_storage.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/host_defines.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hsa_helpers.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/macro_based_grid_launch.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/math_fwd.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/ockl_image.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/program_state.hpp
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/texture_fetch_functions.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/texture_indirect_functions.h
+-- Installing: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/amd_detail/hip_prof_str.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/include/hip/hip_version.h
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/share/hip/version
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP/run_hipcc.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/FindHIP/run_make2cmake.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-version.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-amd.cmake
+-- Up-to-date: /destdir/hip-runtime-amd-7.2.3/usr/lib64/cmake/hip/hip-config-nvidia.cmake
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 00-compress-info-files ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 00-fixup-gir-path ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 00-libdir ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 00-uncompress-manpages ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 01-remove-misc ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 02-remove-libtool-archives ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 02-remove-perl-files ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 02-remove-python-bytecode-files ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 03-remove-empty-dirs ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 04-create-xbps-metadata-scripts ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 05-generate-gitrevs ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 06-strip-and-debug-pkgs ...
+   Stripped library: /usr/lib/libamdhip64.so.7.2.53211
+   Stripped library: /usr/lib/libhiprtc-builtins.so.7.2.53211
+   Stripped library: /usr/lib/libhiprtc.so.7.2.53211
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 10-pkglint-devel-paths ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 11-pkglint-elf-in-usrshare ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 12-rename-python3-c-bindings ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 13-pkg-config-clean-xbps-cross-base-ref ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 14-fix-permissions ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 15-qt-private-api ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 80-prepare-32bit ...
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 98-shlib-provides ...
+   SONAME libamdhip64.so.7 from /usr/lib/libamdhip64.so.7.2.53211
+   SONAME libhiprtc-builtins.so.7 from /usr/lib/libhiprtc-builtins.so.7.2.53211
+   SONAME libhiprtc.so.7 from /usr/lib/libhiprtc.so.7.2.53211
+=> hip-runtime-amd-7.2.3_1: running post-install hook: 99-pkglint-warn-cross-cruft ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 03-restrict-py3-version ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 03-rewrite-python-shebang ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 04-generate-provides ...
+   cmd:hipcc_cmake_linker_helper-7.2.3_1 cmd:hipdemangleatp-7.2.3_1 cmd:roc-obj-7.2.3_1 cmd:roc-obj-extract-7.2.3_1 cmd:roc-obj-extract.bat-7.2.3_1 cmd:roc-obj-ls-7.2.3_1 cmd:roc-obj-ls.bat-7.2.3_1
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 04-generate-runtime-deps ...
+   SONAME: ld-linux-x86-64.so.2 <-> glibc>=2.41_1
+   SONAME: libc.so.6 <-> glibc>=2.41_1
+   SONAME: libgcc_s.so.1 <-> libgcc>=4.4.0_1
+   SONAME: libhsa-runtime64.so.1 <-> rocr-runtime>=7.2.3_1
+   SONAME: libm.so.6 <-> glibc>=2.41_1
+   SONAME: libstdc++.so.6 <-> libstdc++>=4.4.0_1
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 05-generate-32bit-runtime-deps ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 06-verify-python-deps ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 90-set-timestamps ...
+=> hip-runtime-amd-7.2.3_1: setting mtimes to Tue May 26 07:41:18 PM UTC 2026
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 99-pkglint-subpkgs ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 99-pkglint ...
+=> hip-runtime-amd-7.2.3_1: running pre-pkg hook: 999-collected-rdeps ...
+   rocr-runtime>=0 rocm-llvm>=0 rocm-device-libs>=0 rocm-comgr>=0 glibc>=2.41_1 libgcc>=4.4.0_1 rocr-runtime>=7.2.3_1 libstdc++>=4.4.0_1 
+=> hip-runtime-amd-7.2.3_1: running do-pkg hook: 00-gen-pkg ...
+=> Creating hip-runtime-amd-7.2.3_1.x86_64.xbps for repository /host/binpkgs ...
+=> hip-runtime-amd-7.2.3_1: running post-pkg hook: 00-register-pkg ...
+=> Registering new packages to /host/binpkgs
+index: added `hip-runtime-amd-7.2.3_1' (x86_64).
+index: 9 packages registered.
+=> hip-runtime-amd-7.2.3_1: removing autodeps, please wait...
+=> hip-runtime-amd-7.2.3_1: cleaning build directory...
+=> hip-runtime-amd: removing files from destdir...

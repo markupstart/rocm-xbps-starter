@@ -1,0 +1,28 @@
+# Template file for 'rocr-runtime'
+pkgname=rocr-runtime
+version=7.2.3
+revision=1
+build_style=cmake
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DBUILD_TESTING=OFF
+"
+hostmakedepends="cmake ninja pkg-config python3 rocm-llvm xxd"
+makedepends="libnuma-devel libdrm-devel elfutils-devel rocm-device-libs"
+depends="libnuma libdrm libelf"
+shlib_provides="libhsa-runtime64.so.1"
+short_desc="ROCm HSA runtime (ROCr)"
+maintainer="mark <mark@local>"
+license="NCSA"
+homepage="https://github.com/ROCm/ROCR-Runtime"
+distfiles="https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-${version}.tar.gz"
+checksum=fa673a8449be0853acaceb139b6b87abbc66c050b6e92745c26445722725cb05
+
+pre_build() {
+ export ROCM_PATH=/usr
+ export HIP_DEVICE_LIB_PATH=/usr/amdgcn/bitcode
+}
+
+# Note: ROCm Linux package docs commonly refer to this runtime component as hsa-rocr.

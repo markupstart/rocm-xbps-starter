@@ -1,0 +1,52 @@
+# Template file for 'hip-runtime-amd'
+pkgname=hip-runtime-amd
+version=7.2.3
+revision=1
+build_style=cmake
+build_wrksrc=clr-rocm-${version}
+_amdgpu_targets="${AMDGPU_TARGETS:-gfx1100;gfx1101;gfx1102}"
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DCLR_BUILD_HIP=ON
+ -DHIP_PLATFORM=amd
+ -DOpenGL_GL_PREFERENCE=GLVND
+ -DAMDGPU_TARGETS=${_amdgpu_targets}
+ -DUSE_PROF_API=OFF
+ -DHIP_ENABLE_ROCPROFILER_REGISTER=OFF
+ -DBUILD_TESTING=OFF
+"
+hostmakedepends="cmake ninja pkg-config python3 perl rocm-cmake rocm-llvm rocm-comgr"
+makedepends="rocr-runtime rocm-llvm rocm-device-libs rocm-comgr libglvnd-devel"
+depends="rocr-runtime rocm-llvm rocm-device-libs rocm-comgr"
+short_desc="HIP runtime for AMD GPUs"
+maintainer="mark <mark@local>"
+license="MIT"
+homepage="https://github.com/ROCm/clr"
+distfiles="
+ https://github.com/ROCm/clr/archive/refs/tags/rocm-${version}.tar.gz>clr-rocm-${version}.tar.gz
+ https://github.com/ROCm/hip/archive/refs/tags/rocm-${version}.tar.gz>hip-rocm-${version}.tar.gz
+"
+checksum="
+ 60faffa5c56ab04673e8c3f6f8788ce20cb0b284a8a5f3428abf14399591bded
+ e6ab65cb2a236eee0e1f2738457367dffc3ce1e8dfb050ac22b7712e35aa896e
+"
+
+pre_configure() {
+ configure_args+=" -DHIP_COMMON_DIR=${wrksrc}/hip-rocm-${version}"
+}
+
+post_extract() {
+ local hipamd_cmakelists="${wrksrc}/clr-rocm-${version}/hipamd/CMakeLists.txt"
+
+ if [[ -f "${hipamd_cmakelists}" ]] && ! grep -q '^cmake_minimum_required' "${hipamd_cmakelists}"; then
+  sed -i '1i cmake_minimum_required(VERSION 3.5)' "${hipamd_cmakelists}"
+ fi
+}
+
+# Notes:
+# 1) For production packaging, you will likely split this into runtime and devel subpackages.
+# 2) rocm-device-libs is included here because it is commonly required by HIP stacks.
+# 3) ROCm docs map this under the rocm-hip-runtime meta-package.
+# 4) Override defaults by exporting AMDGPU_TARGETS, e.g. AMDGPU_TARGETS="gfx1100".
