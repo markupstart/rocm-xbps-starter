@@ -1,0 +1,39 @@
+# Template file for 'rocm-opencl'
+pkgname=rocm-opencl
+version=7.2.3
+revision=1
+build_style=cmake
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DCLR_BUILD_OCL=ON
+ -DROCM_PATH=/usr
+ -DOpenGL_GL_PREFERENCE=GLVND
+ -DBUILD_TESTS=OFF
+ -DBUILD_ICD=OFF
+"
+hostmakedepends="cmake ninja pkg-config python3 perl rocm-llvm rocm-comgr"
+makedepends="rocr-runtime rocm-llvm rocm-device-libs rocm-comgr libglvnd-devel"
+depends="rocr-runtime rocm-llvm rocm-device-libs rocm-comgr ocl-icd"
+short_desc="ROCm OpenCL runtime for AMD GPUs"
+maintainer="mark <mark@local>"
+license="MIT"
+homepage="https://github.com/ROCm/clr"
+distfiles="https://github.com/ROCm/clr/archive/refs/tags/rocm-${version}.tar.gz>clr-rocm-${version}.tar.gz"
+checksum=60faffa5c56ab04673e8c3f6f8788ce20cb0b284a8a5f3428abf14399591bded
+
+post_extract() {
+ sed -i '/add_subdirectory(tools\/clinfo)/d' "${wrksrc}/opencl/CMakeLists.txt"
+ sed -i '/install(TARGETS clinfo /d' "${wrksrc}/opencl/packaging/CMakeLists.txt"
+ sed -i 's|/opt/rocm/lib|/usr/lib|' "${wrksrc}/opencl/packaging/rocm-opencl.conf"
+}
+
+post_install() {
+ vinstall /dev/stdin 644 etc/OpenCL/vendors amdocl64.icd <<'EOF'
+libamdocl64.so
+EOF
+ vinstall /dev/stdin 644 etc/ld.so.conf.d 10-rocm-opencl.conf <<'EOF'
+/usr/lib
+EOF
+}

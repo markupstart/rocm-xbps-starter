@@ -1,0 +1,24 @@
+# Template file for 'rocm-comgr'
+pkgname=rocm-comgr
+version=7.2.3
+revision=1
+build_style=cmake
+build_wrksrc=amd/comgr
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DCMAKE_PREFIX_PATH=/usr
+ -DCOMGR_DISABLE_SPIRV=ON
+"
+hostmakedepends="cmake ninja pkg-config python3 perl rocm-llvm rocm-device-libs"
+makedepends="rocm-llvm rocm-device-libs"
+depends="rocm-llvm rocm-device-libs"
+short_desc="ROCm Code Object Manager library"
+maintainer="mark <mark@local>"
+license="Apache-2.0 WITH LLVM-exception"
+homepage="https://github.com/ROCm/llvm-project/tree/amd-staging/amd/comgr"
+distfiles="https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-${version}.tar.gz"
+checksum=6239fa0c72b150cf0a325676264d3030a67389dec4fca7103f563a70c2b70114
+
+# Note: For ROCm 7.x, amd_comgr sources are carried in llvm-project under amd/comgr.

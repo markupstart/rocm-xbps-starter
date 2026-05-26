@@ -1,0 +1,55 @@
+# Template file for 'hipcc'
+pkgname=hipcc
+version=7.2.3
+revision=4
+build_style=cmake
+build_wrksrc=amd/hipcc
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DROCM_DEP_ROCMCORE=OFF
+ -DHIPCC_BACKWARD_COMPATIBILITY=ON
+"
+hostmakedepends="cmake ninja pkg-config python3 perl"
+makedepends="rocm-llvm"
+depends="hip-runtime-amd rocm-llvm"
+short_desc="HIP compiler driver (hipcc and hipconfig)"
+maintainer="mark <mark@local>"
+license="MIT"
+homepage="https://github.com/ROCm/llvm-project/tree/amd-staging/amd/hipcc"
+distfiles="https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-${version}.tar.gz"
+checksum=6239fa0c72b150cf0a325676264d3030a67389dec4fca7103f563a70c2b70114
+
+# Note: ROCm 7.x carries hipcc in llvm-project under amd/hipcc.
+
+post_install() {
+ mv "${DESTDIR}/usr/bin/hipcc" "${DESTDIR}/usr/bin/hipcc.bin"
+ mv "${DESTDIR}/usr/bin/hipconfig" "${DESTDIR}/usr/bin/hipconfig.bin"
+
+ vinstall /dev/stdin 755 usr/bin hipcc <<'EOF'
+#!/bin/sh
+if [ -z "${HIP_CLANG_PATH:-}" ]; then
+	if [ -n "${ROCM_PATH:-}" ] && [ -x "${ROCM_PATH}/bin/clang++" ]; then
+		export HIP_CLANG_PATH="${ROCM_PATH}/bin"
+	elif [ ! -x /usr/lib/llvm/bin/clang++ ] && [ -x /usr/bin/clang++ ]; then
+		export HIP_CLANG_PATH=/usr/bin
+	fi
+fi
+bindir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+exec "${bindir}/hipcc.bin" "$@"
+EOF
+
+ vinstall /dev/stdin 755 usr/bin hipconfig <<'EOF'
+#!/bin/sh
+if [ -z "${HIP_CLANG_PATH:-}" ]; then
+	if [ -n "${ROCM_PATH:-}" ] && [ -x "${ROCM_PATH}/bin/clang++" ]; then
+		export HIP_CLANG_PATH="${ROCM_PATH}/bin"
+	elif [ ! -x /usr/lib/llvm/bin/clang++ ] && [ -x /usr/bin/clang++ ]; then
+		export HIP_CLANG_PATH=/usr/bin
+	fi
+fi
+bindir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+exec "${bindir}/hipconfig.bin" "$@"
+EOF
+}

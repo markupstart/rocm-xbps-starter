@@ -1,0 +1,416 @@
+=> xbps-src: updating repositories for host (x86_64)...
+[*] Updating repository `https://repo-default.voidlinux.org/current/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/nonfree/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/debug/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/bootstrap/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/x86_64-repodata' ...
+[*] Updating repository `https://repo-default.voidlinux.org/current/multilib/nonfree/x86_64-repodata' ...
+=> xbps-src: updating software in / masterdir...
+=> xbps-src: cleaning up / masterdir...
+=> rocm-comgr-7.2.3_1: removing autodeps, please wait...
+=> rocm-comgr-7.2.3_1: building with [cmake] for x86_64...
+   [host] cmake-4.2.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [host] pkg-config-0.29.2_3: found (https://repo-default.voidlinux.org/current)
+   [host] python3-3.14.5_1: found (https://repo-default.voidlinux.org/current)
+   [host] perl-5.42.2_1: found (https://repo-default.voidlinux.org/current)
+   [host] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [host] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [host] cmake-bootstrap-4.1.2_1: found (https://repo-default.voidlinux.org/current/bootstrap)
+   [host] ninja-1.13.2_2: found (https://repo-default.voidlinux.org/current)
+   [target] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [target] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-llvm-7.2.3_1: found (/host/binpkgs)
+   [runtime] rocm-device-libs-7.2.3_1: found (/host/binpkgs)
+=> rocm-comgr-7.2.3_1: installing host dependencies: cmake-4.2.2_2 ninja-1.13.2_2 pkg-config-0.29.2_3 python3-3.14.5_1 perl-5.42.2_1 rocm-llvm-7.2.3_1 rocm-device-libs-7.2.3_1 cmake-bootstrap-4.1.2_1 ninja-1.13.2_2 ...
+=> rocm-comgr-7.2.3_1: installing target dependencies: rocm-llvm-7.2.3_1 rocm-device-libs-7.2.3_1 ...
+ERROR: Package `rocm-llvm-7.2.3_1' already installed.
+ERROR: Package `rocm-device-libs-7.2.3_1' already installed.
+=> rocm-comgr-7.2.3_1: running do-fetch hook: 00-distfiles ...
+=> rocm-comgr-7.2.3_1: running do-extract hook: 00-distfiles ...
+=> rocm-comgr-7.2.3_1: extracting distfile(s), please wait...
+=> rocm-comgr-7.2.3_1: running do-patch hook: 00-patches ...
+=> rocm-comgr-7.2.3_1: running pre-configure hook: 00-gnu-configure-asneeded ...
+=> rocm-comgr-7.2.3_1: running pre-configure hook: 01-override-config ...
+=> rocm-comgr-7.2.3_1: running pre-configure hook: 02-script-wrapper ...
+=> rocm-comgr-7.2.3_1: running do_configure ...
+Comgr Version: 3.0.0
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+
+------------LLVM_DIR: /usr/lib64/cmake/llvm
+---LLVM_INCLUDE_DIRS: /usr/include
+---LLVM_LIBRARY_DIRS: /usr/lib
+-----------Clang_DIR: /usr/lib64/cmake/clang
+--CLANG_INCLUDE_DIRS: /usr/include
+----LLD_INCLUDE_DIRS: /usr/include
+---AMDDeviceLibs_DIR: /usr/lib64/cmake/AMDDeviceLibs
+----COMGR_GIT_COMMIT: not-available
+----COMGR_GIT_BRANCH: not-available
+
+-- Comgr SPIRV Disabled
+-- Found Python3: /usr/bin/python3.14 (found version "3.14.5") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- LLVM_LIT_PATH: /usr/bin/llvm-lit
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /builddir/rocm-comgr-7.2.3/amd/comgr/build
+=> rocm-comgr-7.2.3_1: running pre-build hook: 02-script-wrapper ...
+=> rocm-comgr-7.2.3_1: running do_build ...
+[1/192] Generating source/reloc-asm.o
+clang-22: warning: argument unused during compilation: '-nogpulib' [-Wunused-command-line-argument]
+clang-22: warning: argument unused during compilation: '-nogpuinc' [-Wunused-command-line-argument]
+[2/192] Generating source/source1.bc
+[3/192] Generating source/square.bc
+[4/192] Generating source/cube.bc
+[5/192] Generating source/linking/empty.o
+[6/192] Generating source/linking/kernel0.o
+[7/192] Generating source/cube.a
+[8/192] Generating source/reloc2.o
+[9/192] Generating source/reloc1.o
+[10/192] Generating source/linking/kernel1.o
+[11/192] Generating source/symbolize-debug.so
+[12/192] Generating source/double.o
+[13/192] Generating source/multiple-note-records-one-kernel.out
+[14/192] Generating source/multiple-note-records.out
+[15/192] Building C object CMakeFiles/bc2h.dir/bc2h.c.o
+[16/192] Generating source/shared.so
+[17/192] Linking C executable bc2h
+[18/192] Generating oclc_abi_version_400.inc
+[19/192] Generating oclc_abi_version_500.inc
+[20/192] Generating oclc_abi_version_600.inc
+[21/192] Generating oclc_correctly_rounded_sqrt_off.inc
+[22/192] Generating oclc_correctly_rounded_sqrt_on.inc
+[23/192] Generating oclc_daz_opt_off.inc
+[24/192] Generating oclc_daz_opt_on.inc
+[25/192] Generating oclc_finite_only_off.inc
+[26/192] Generating oclc_finite_only_on.inc
+[27/192] Generating oclc_isa_version_10-1-generic.inc
+[28/192] Generating oclc_isa_version_10-3-generic.inc
+[29/192] Generating oclc_isa_version_1010.inc
+[30/192] Generating oclc_isa_version_1011.inc
+[31/192] Generating oclc_isa_version_1012.inc
+[32/192] Generating oclc_isa_version_1013.inc
+[33/192] Generating oclc_isa_version_1030.inc
+[34/192] Generating oclc_isa_version_1031.inc
+[35/192] Generating oclc_isa_version_1032.inc
+[36/192] Generating oclc_isa_version_1033.inc
+[37/192] Generating oclc_isa_version_1034.inc
+[38/192] Generating oclc_isa_version_1035.inc
+[39/192] Generating oclc_isa_version_1036.inc
+[40/192] Generating oclc_isa_version_11-generic.inc
+[41/192] Generating oclc_isa_version_1100.inc
+[42/192] Generating oclc_isa_version_1101.inc
+[43/192] Generating oclc_isa_version_1102.inc
+[44/192] Generating oclc_isa_version_1103.inc
+[45/192] Generating oclc_isa_version_1150.inc
+[46/192] Generating oclc_isa_version_1151.inc
+[47/192] Generating oclc_isa_version_1152.inc
+[48/192] Generating oclc_isa_version_1153.inc
+[49/192] Generating oclc_isa_version_12-generic.inc
+[50/192] Generating oclc_isa_version_1200.inc
+[51/192] Generating oclc_isa_version_1201.inc
+[52/192] Generating oclc_isa_version_1250.inc
+[53/192] Generating oclc_isa_version_1251.inc
+[54/192] Generating oclc_isa_version_600.inc
+[55/192] Generating oclc_isa_version_601.inc
+[56/192] Generating oclc_isa_version_602.inc
+[57/192] Generating oclc_isa_version_700.inc
+[58/192] Generating oclc_isa_version_701.inc
+[59/192] Generating oclc_isa_version_702.inc
+[60/192] Generating oclc_isa_version_703.inc
+[61/192] Generating oclc_isa_version_704.inc
+[62/192] Generating oclc_isa_version_705.inc
+[63/192] Generating oclc_isa_version_801.inc
+[64/192] Generating oclc_isa_version_802.inc
+[65/192] Generating oclc_isa_version_803.inc
+[66/192] Generating oclc_isa_version_805.inc
+[67/192] Generating oclc_isa_version_810.inc
+[68/192] Generating oclc_isa_version_9-4-generic.inc
+[69/192] Generating oclc_isa_version_9-generic.inc
+[70/192] Generating oclc_isa_version_900.inc
+[71/192] Generating oclc_isa_version_902.inc
+[72/192] Generating oclc_isa_version_904.inc
+[73/192] Generating oclc_isa_version_906.inc
+[74/192] Generating oclc_isa_version_908.inc
+[75/192] Generating oclc_isa_version_909.inc
+[76/192] Generating oclc_isa_version_90a.inc
+[77/192] Generating oclc_isa_version_90c.inc
+[78/192] Generating oclc_isa_version_942.inc
+[79/192] Generating oclc_isa_version_950.inc
+[80/192] Generating oclc_unsafe_math_off.inc
+[81/192] Generating oclc_unsafe_math_on.inc
+[82/192] Generating oclc_wavefrontsize64_off.inc
+[83/192] Generating oclc_wavefrontsize64_on.inc
+[84/192] Generating hip.inc
+[85/192] Generating opencl-c-base.inc
+[86/192] Generating asanrtl.inc
+[87/192] Generating ocml.inc
+[88/192] Generating ockl.inc
+[89/192] Generating opencl.inc
+[90/192] Generating /builddir/rocm-comgr-7.2.3/amd/comgr/build/include/libraries_sha.inc
+[91/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-diagnostic-handler.cpp.o
+[92/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-signal.cpp.o
+[93/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-env.cpp.o
+[94/192] Building C object test/CMakeFiles/data_test.dir/data_test.c.o
+[95/192] Building C object test/CMakeFiles/disasm_instr_test.dir/disasm_instr_test.c.o
+[96/192] Building C object test/CMakeFiles/metadata_yaml_test.dir/metadata_yaml_test.c.o
+[97/192] Building C object test/CMakeFiles/metadata_tp_test.dir/metadata_tp_test.c.o
+[98/192] Building CXX object CMakeFiles/amd_comgr.dir/src/time-stat/time-stat.cpp.o
+[99/192] Building C object test/CMakeFiles/metadata_msgpack_test.dir/metadata_msgpack_test.c.o
+[100/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-unbundle-command.cpp.o
+[101/192] Building C object test/CMakeFiles/metadata_multiple_msgpacks_test.dir/metadata_multiple_msgpacks_test.c.o
+[102/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-spirv-command.cpp.o
+[103/192] Building C object test/CMakeFiles/metadata_merge_test.dir/metadata_merge_test.c.o
+[104/192] Building C object test/CMakeFiles/symbols_test.dir/symbols_test.c.o
+[105/192] Building C object test/CMakeFiles/symbols_iterate_test.dir/symbols_iterate_test.c.o
+[106/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-clang-command.cpp.o
+[107/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-cache-command.cpp.o
+[108/192] Building C object test/CMakeFiles/compile_log_remarks_test.dir/compile_log_remarks_test.c.o
+[109/192] Building C object test/CMakeFiles/compile_minimal_test.dir/compile_minimal_test.c.o
+[110/192] Building C object test/CMakeFiles/compile_test.dir/compile_test.c.o
+[111/192] Building C object test/CMakeFiles/compile_log_test.dir/compile_log_test.c.o
+[112/192] Building C object test/CMakeFiles/compile_source_with_device_libs_to_bc_test.dir/compile_source_with_device_libs_to_bc_test.c.o
+[113/192] Building C object test/CMakeFiles/compile_source_with_device_libs_to_bc_with_vfs_test.dir/compile_source_with_device_libs_to_bc_with_vfs_test.c.o
+[114/192] Building C object test/CMakeFiles/assemble_test.dir/assemble_test.c.o
+[115/192] Building C object test/CMakeFiles/link_test.dir/link_test.c.o
+[116/192] Building C object test/CMakeFiles/isa_name_parsing_test.dir/isa_name_parsing_test.c.o
+[117/192] Building C object test/CMakeFiles/include_subdirectory_test.dir/include_subdirectory_test.c.o
+[118/192] Building C object test/CMakeFiles/get_data_isa_name_test.dir/get_data_isa_name_test.c.o
+[119/192] Building C object test/CMakeFiles/fail_to_build_driver.dir/fail_to_build_driver.c.o
+[120/192] Building C object test/CMakeFiles/demangle_test.dir/demangle_test.c.o
+[121/192] Building C object test/CMakeFiles/file_map.dir/file_map.c.o
+[122/192] Building C object test/CMakeFiles/lookup_code_object_test.dir/lookup_code_object_test.c.o
+[123/192] Building C object test/CMakeFiles/mangled_names_test.dir/mangled_names_test.c.o
+[124/192] Building C object test/CMakeFiles/map_elf_virtual_address_test.dir/map_elf_virtual_address_test.c.o
+[125/192] Building C object test/CMakeFiles/nested_kernel_test.dir/nested_kernel_test.c.o
+[126/192] Building C object test/CMakeFiles/compile_source_to_executable.dir/compile_source_to_executable.c.o
+[127/192] Building C object test/CMakeFiles/symbolize_test.dir/symbolize_test.c.o
+[128/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-cache.cpp.o
+[129/192] Building C object test/CMakeFiles/name_expression_map_test.dir/name_expression_map_test.c.o
+[130/192] Building C object test-lit/CMakeFiles/spirv-translator.dir/comgr-sources/spirv-translator.c.o
+[131/192] Building C object test-lit/CMakeFiles/source-to-bc-with-dev-libs.dir/comgr-sources/source-to-bc-with-dev-libs.c.o
+[132/192] Building C object test/CMakeFiles/compile_hip_to_relocatable.dir/compile_hip_to_relocatable.c.o
+[133/192] Building C object test/CMakeFiles/compile_hip_test.dir/compile_hip_test.c.o
+[134/192] Building C object test-lit/CMakeFiles/compile-opencl-minimal.dir/comgr-sources/compile-opencl-minimal.c.o
+[135/192] Building C object test-lit/CMakeFiles/get-version.dir/comgr-sources/get-version.c.o
+[136/192] Building C object test-lit/CMakeFiles/spirv-to-reloc.dir/comgr-sources/spirv-to-reloc.c.o
+[137/192] Building C object test-lit/CMakeFiles/status-string.dir/comgr-sources/status-string.c.o
+[138/192] Building C object test/CMakeFiles/mangled_names_hip_test.dir/mangled_names_hip_test.c.o
+[139/192] Building C object test-lit/CMakeFiles/unbundle.dir/comgr-sources/unbundle.c.o
+[140/192] Building C object test-lit/CMakeFiles/data-action.dir/comgr-sources/data-action.c.o
+[141/192] Building CXX object test/CMakeFiles/multithread_test.dir/multithread_test.cpp.o
+[142/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-symbol.cpp.o
+[143/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-disassembly.cpp.o
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-disassembly.cpp: In static member function 'static amd_comgr_status_t COMGR::DisassemblyInfo::create(const COMGR::TargetIdentifier&, COMGR::ReadMemoryCallback, COMGR::PrintInstructionCallback, COMGR::PrintAddressAnnotationCallback, amd_comgr_disassembly_info_t*)':
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-disassembly.cpp:49:71: warning: 'llvm::MCRegisterInfo* llvm::Target::createMCRegInfo(llvm::StringRef) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+   49 |   std::unique_ptr<const MCRegisterInfo> MRI(TheTarget->createMCRegInfo(TT));
+      |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-disassembly.cpp:19:
+/usr/include/llvm/MC/TargetRegistry.h:446:19: note: declared here
+  446 |   MCRegisterInfo *createMCRegInfo(StringRef TT) const {
+      |                   ^~~~~~~~~~~~~~~
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-disassembly.cpp:56:33: warning: 'llvm::MCAsmInfo* llvm::Target::createMCAsmInfo(const llvm::MCRegisterInfo&, llvm::StringRef, const llvm::MCTargetOptions&) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+   56 |       TheTarget->createMCAsmInfo(*MRI, TT, MCOptions));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/usr/include/llvm/MC/TargetRegistry.h:394:14: note: declared here
+  394 |   MCAsmInfo *createMCAsmInfo(const MCRegisterInfo &MRI, StringRef TheTriple,
+      |              ^~~~~~~~~~~~~~~
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-disassembly.cpp:67:39: warning: 'llvm::MCSubtargetInfo* llvm::Target::createMCSubtargetInfo(llvm::StringRef, llvm::StringRef, llvm::StringRef) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+   67 |       TheTarget->createMCSubtargetInfo(TT, Ident.Processor, Features));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/llvm/MC/TargetRegistry.h:461:20: note: declared here
+  461 |   MCSubtargetInfo *createMCSubtargetInfo(StringRef TheTriple, StringRef CPU,
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+[144/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-symbolizer.cpp.o
+[145/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-metadata.cpp.o
+[146/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-device-libs.cpp.o
+[147/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr.cpp.o
+[148/192] Building CXX object CMakeFiles/amd_comgr.dir/src/comgr-compiler.cpp.o
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-compiler.cpp: In function 'bool COMGR::{anonymous}::executeAssemblerImpl(AssemblerInvocation&, clang::DiagnosticsEngine&, llvm::raw_ostream&)':
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-compiler.cpp:380:65: warning: 'llvm::MCRegisterInfo* llvm::Target::createMCRegInfo(llvm::StringRef) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+  380 |   std::unique_ptr<MCRegisterInfo> MRI(TheTarget->createMCRegInfo(Opts.Triple));
+      |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-compiler.cpp:58:
+/usr/include/llvm/MC/TargetRegistry.h:446:19: note: declared here
+  446 |   MCRegisterInfo *createMCRegInfo(StringRef TT) const {
+      |                   ^~~~~~~~~~~~~~~
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-compiler.cpp:387:33: warning: 'llvm::MCAsmInfo* llvm::Target::createMCAsmInfo(const llvm::MCRegisterInfo&, llvm::StringRef, const llvm::MCTargetOptions&) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+  387 |       TheTarget->createMCAsmInfo(*MRI, Opts.Triple, MCOptions));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/llvm/MC/TargetRegistry.h:394:14: note: declared here
+  394 |   MCAsmInfo *createMCAsmInfo(const MCRegisterInfo &MRI, StringRef TheTriple,
+      |              ^~~~~~~~~~~~~~~
+/builddir/rocm-comgr-7.2.3/amd/comgr/src/comgr-compiler.cpp:410:39: warning: 'llvm::MCSubtargetInfo* llvm::Target::createMCSubtargetInfo(llvm::StringRef, llvm::StringRef, llvm::StringRef) const' is deprecated: Use overload accepting Triple instead [-Wdeprecated-declarations]
+  410 |       TheTarget->createMCSubtargetInfo(Opts.Triple, Opts.CPU, FS));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/llvm/MC/TargetRegistry.h:461:20: note: declared here
+  461 |   MCSubtargetInfo *createMCSubtargetInfo(StringRef TheTriple, StringRef CPU,
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+[149/192] Linking CXX shared library libamd_comgr.so.3.0.0
+[150/192] Creating library symlink libamd_comgr.so.3 libamd_comgr.so
+[151/192] Linking C executable test/data_test
+[152/192] Linking C executable test/compile_test
+[153/192] Linking C executable test/metadata_yaml_test
+[154/192] Linking C executable test/metadata_multiple_msgpacks_test
+[155/192] Linking C executable test/compile_minimal_test
+[156/192] Linking C executable test/disasm_instr_test
+[157/192] Linking C executable test/assemble_test
+[158/192] Linking C executable test/metadata_merge_test
+[159/192] Linking C executable test/metadata_msgpack_test
+[160/192] Linking C executable test/compile_log_remarks_test
+[161/192] Linking C executable test/metadata_tp_test
+[162/192] Linking C executable test/symbols_iterate_test
+[163/192] Linking C executable test/compile_log_test
+[164/192] Linking C executable test/compile_source_with_device_libs_to_bc_with_vfs_test
+[165/192] Linking C executable test/compile_source_with_device_libs_to_bc_test
+[166/192] Linking C executable test/symbols_test
+[167/192] Linking C executable test/link_test
+[168/192] Linking C executable test/isa_name_parsing_test
+[169/192] Linking C executable test/get_data_isa_name_test
+[170/192] Linking C executable test/include_subdirectory_test
+[171/192] Linking C executable test/demangle_test
+[172/192] Linking C executable test/file_map
+[173/192] Linking C executable test/fail_to_build_driver
+[174/192] Linking C executable test/lookup_code_object_test
+[175/192] Linking C executable test/symbolize_test
+[176/192] Linking C executable test/map_elf_virtual_address_test
+[177/192] Linking C executable test/mangled_names_test
+[178/192] Linking C executable test/nested_kernel_test
+[179/192] Linking C executable test/compile_hip_test
+[180/192] Linking C executable test/compile_hip_to_relocatable
+[181/192] Linking C executable test-lit/source-to-bc-with-dev-libs
+[182/192] Linking C executable test/mangled_names_hip_test
+[183/192] Linking C executable test-lit/spirv-translator
+[184/192] Linking CXX executable test/multithread_test
+[185/192] Linking C executable test/name_expression_map_test
+[186/192] Linking C executable test/compile_source_to_executable
+[187/192] Linking C executable test-lit/spirv-to-reloc
+[188/192] Linking C executable test-lit/compile-opencl-minimal
+[189/192] Linking C executable test-lit/unbundle
+[190/192] Linking C executable test-lit/data-action
+[191/192] Linking C executable test-lit/get-version
+[192/192] Linking C executable test-lit/status-string
+=> rocm-comgr-7.2.3_1: skipping check (XBPS_CHECK_PKGS is disabled) ...
+=> rocm-comgr-7.2.3_1: running pre-install hook: 00-libdir ...
+=> rocm-comgr-7.2.3_1: running pre-install hook: 02-script-wrapper ...
+=> rocm-comgr-7.2.3_1: running pre-install hook: 98-fixup-gir-path ...
+=> rocm-comgr-7.2.3_1: running do_install ...
+[1/45] Linking CXX shared library libamd_comgr.so.3.0.0
+[2/45] Creating library symlink libamd_comgr.so.3 libamd_comgr.so
+[3/45] Linking C executable test/metadata_msgpack_test
+[4/45] Linking C executable test/data_test
+[5/45] Linking C executable test/metadata_tp_test
+[6/45] Linking C executable test/disasm_instr_test
+[7/45] Linking C executable test/metadata_multiple_msgpacks_test
+[8/45] Linking C executable test/symbols_test
+[9/45] Linking C executable test/symbols_iterate_test
+[10/45] Linking C executable test/compile_test
+[11/45] Linking C executable test/link_test
+[12/45] Linking C executable test/metadata_yaml_test
+[13/45] Linking C executable test/compile_log_remarks_test
+[14/45] Linking C executable test/isa_name_parsing_test
+[15/45] Linking C executable test/compile_source_with_device_libs_to_bc_test
+[16/45] Linking C executable test/compile_minimal_test
+[17/45] Linking C executable test/metadata_merge_test
+[18/45] Linking C executable test/compile_log_test
+[19/45] Linking C executable test/assemble_test
+[20/45] Linking C executable test/compile_source_with_device_libs_to_bc_with_vfs_test
+[21/45] Linking C executable test/demangle_test
+[22/45] Linking C executable test/file_map
+[23/45] Linking C executable test/fail_to_build_driver
+[24/45] Linking C executable test/get_data_isa_name_test
+[25/45] Linking C executable test/include_subdirectory_test
+[26/45] Linking C executable test/symbolize_test
+[27/45] Linking C executable test/mangled_names_test
+[28/45] Linking C executable test/map_elf_virtual_address_test
+[29/45] Linking C executable test/lookup_code_object_test
+[30/45] Linking C executable test/compile_source_to_executable
+[31/45] Linking CXX executable test/multithread_test
+[32/45] Linking C executable test/nested_kernel_test
+[33/45] Linking C executable test/name_expression_map_test
+[34/45] Linking C executable test/compile_hip_test
+[35/45] Linking C executable test/compile_hip_to_relocatable
+[36/45] Linking C executable test/mangled_names_hip_test
+[37/45] Linking C executable test-lit/source-to-bc-with-dev-libs
+[38/45] Linking C executable test-lit/compile-opencl-minimal
+[39/45] Linking C executable test-lit/spirv-to-reloc
+[40/45] Linking C executable test-lit/spirv-translator
+[41/45] Linking C executable test-lit/status-string
+[42/45] Linking C executable test-lit/get-version
+[43/45] Linking C executable test-lit/unbundle
+[44/45] Linking C executable test-lit/data-action
+[44/45] Install the project...
+-- Install configuration: "Release"
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/libamd_comgr.so.3.0.0
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/libamd_comgr.so.3
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/libamd_comgr.so
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/include/amd_comgr/amd_comgr.h
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/share/doc/amd_comgr/README.md
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/share/doc/amd_comgr/LICENSE.txt
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/cmake/amd_comgr/amd_comgr-config.cmake
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/cmake/amd_comgr/amd_comgr-targets.cmake
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/cmake/amd_comgr/amd_comgr-targets-release.cmake
+-- Installing: /destdir/rocm-comgr-7.2.3/usr/lib64/cmake/amd_comgr/amd_comgr-config-version.cmake
+=> rocm-comgr-7.2.3_1: running post-install hook: 00-compress-info-files ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 00-fixup-gir-path ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 00-libdir ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 00-uncompress-manpages ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 01-remove-misc ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 02-remove-libtool-archives ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 02-remove-perl-files ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 02-remove-python-bytecode-files ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 03-remove-empty-dirs ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 04-create-xbps-metadata-scripts ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 05-generate-gitrevs ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 06-strip-and-debug-pkgs ...
+   Stripped library: /usr/lib/libamd_comgr.so.3.0.0
+=> rocm-comgr-7.2.3_1: running post-install hook: 10-pkglint-devel-paths ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 11-pkglint-elf-in-usrshare ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 12-rename-python3-c-bindings ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 13-pkg-config-clean-xbps-cross-base-ref ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 14-fix-permissions ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 15-qt-private-api ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 80-prepare-32bit ...
+=> rocm-comgr-7.2.3_1: running post-install hook: 98-shlib-provides ...
+   SONAME libamd_comgr.so.3 from /usr/lib/libamd_comgr.so.3.0.0
+=> rocm-comgr-7.2.3_1: running post-install hook: 99-pkglint-warn-cross-cruft ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 03-restrict-py3-version ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 03-rewrite-python-shebang ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 04-generate-provides ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 04-generate-runtime-deps ...
+   SONAME: ld-linux-x86-64.so.2 <-> glibc>=2.41_1
+   SONAME: libc.so.6 <-> glibc>=2.41_1
+   SONAME: libgcc_s.so.1 <-> libgcc>=4.4.0_1
+   SONAME: libm.so.6 <-> glibc>=2.41_1
+   SONAME: libstdc++.so.6 <-> libstdc++>=4.4.0_1
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 05-generate-32bit-runtime-deps ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 06-verify-python-deps ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 90-set-timestamps ...
+=> rocm-comgr-7.2.3_1: setting mtimes to Tue May 26 07:30:54 PM UTC 2026
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 99-pkglint-subpkgs ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 99-pkglint ...
+=> rocm-comgr-7.2.3_1: running pre-pkg hook: 999-collected-rdeps ...
+   rocm-llvm>=0 rocm-device-libs>=0 glibc>=2.41_1 libgcc>=4.4.0_1 libstdc++>=4.4.0_1 
+=> rocm-comgr-7.2.3_1: running do-pkg hook: 00-gen-pkg ...
+=> Creating rocm-comgr-7.2.3_1.x86_64.xbps for repository /host/binpkgs ...
+=> rocm-comgr-7.2.3_1: running post-pkg hook: 00-register-pkg ...
+=> Registering new packages to /host/binpkgs
+index: added `rocm-comgr-7.2.3_1' (x86_64).
+index: 9 packages registered.
+=> rocm-comgr-7.2.3_1: removing autodeps, please wait...
+=> rocm-comgr-7.2.3_1: cleaning build directory...
+=> rocm-comgr: removing files from destdir...

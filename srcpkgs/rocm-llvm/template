@@ -1,0 +1,30 @@
+# Template file for 'rocm-llvm'
+pkgname=rocm-llvm
+version=7.2.3
+revision=1
+build_style=cmake
+build_wrksrc=llvm
+configure_args="
+ -G Ninja
+ -DCMAKE_BUILD_TYPE=Release
+ -DCMAKE_INSTALL_PREFIX=/usr
+ -DLLVM_ENABLE_PROJECTS=clang;lld
+ -DLLVM_TARGETS_TO_BUILD=AMDGPU;X86
+ -DLLVM_ENABLE_ASSERTIONS=OFF
+ -DLLVM_INCLUDE_BENCHMARKS=OFF
+ -DLLVM_INCLUDE_EXAMPLES=OFF
+ -DLLVM_INCLUDE_TESTS=OFF
+"
+hostmakedepends="cmake ninja python3 perl"
+python_version=3
+short_desc="ROCm LLVM/Clang toolchain with AMDGPU target"
+maintainer="mark <mark@local>"
+license="Apache-2.0 WITH LLVM-exception"
+homepage="https://github.com/ROCm/llvm-project"
+distfiles="https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-${version}.tar.gz"
+checksum=6239fa0c72b150cf0a325676264d3030a67389dec4fca7103f563a70c2b70114
+
+# Notes:
+# 1) This is a starter stub and may require additional split packages (-devel, -libs).
+# 2) If build fails, patching may be needed for current Void toolchain versions.
+# 3) In ROCm package docs this is a single package (not a meta-package).
