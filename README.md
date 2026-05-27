@@ -205,7 +205,7 @@ ls -l /dev/kfd /dev/dri/renderD* 2>/dev/null
 Check user groups:
 
 ```bash
-id -nG
+groups
 ```
 
 You usually want video and render groups for ROCm access.
