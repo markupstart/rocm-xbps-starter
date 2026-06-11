@@ -58,21 +58,8 @@ cd ~/void-packages
 cd /home/mark/Projects/rocm-xbps-starter
 ```
 
-5) Fill all checksums automatically
+5) Change checksums for each template if templates are bumped to a new version
 
-This command fetches each upstream tarball hash and writes it into matching templates.
-
-```bash
-while IFS=': ' read -r pkg sum; do
-  sed -i "s|^checksum=.*$|checksum=${sum}|" "srcpkgs/${pkg}/template"
-done < <(./scripts/print-checksums.sh | awk '/: [0-9a-f]{64}$/ {print}')
-```
-
-6) Confirm there are no placeholders left
-
-```bash
-rg -n "REPLACE_WITH_REAL_CHECKSUM" srcpkgs || echo "OK: all checksums set"
-```
 
 7) Build core ROCm packages
 
