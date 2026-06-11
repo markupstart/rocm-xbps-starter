@@ -1,6 +1,6 @@
 # Template file for 'rocr-runtime'
 pkgname=rocr-runtime
-version=7.2.3
+version=7.2.4
 revision=1
 build_style=cmake
 configure_args="
@@ -18,7 +18,7 @@ maintainer="mark <mark@local>"
 license="NCSA"
 homepage="https://github.com/ROCm/ROCR-Runtime"
 distfiles="https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-${version}.tar.gz"
-checksum=fa673a8449be0853acaceb139b6b87abbc66c050b6e92745c26445722725cb05
+checksum=60532cd86edce5a603aa18df406ec1f5a3d18f0663d79b3b7822ff721c5a04ec
 
 pre_build() {
  export ROCM_PATH=/usr

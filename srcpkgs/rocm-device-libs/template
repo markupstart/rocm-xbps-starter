@@ -1,6 +1,6 @@
 # Template file for 'rocm-device-libs'
 pkgname=rocm-device-libs
-version=7.2.3
+version=7.2.4
 revision=1
 build_style=cmake
 build_wrksrc=amd/device-libs
@@ -18,6 +18,6 @@ maintainer="mark <mark@local>"
 license="MIT"
 homepage="https://github.com/ROCm/llvm-project"
 distfiles="https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-${version}.tar.gz"
-checksum=6239fa0c72b150cf0a325676264d3030a67389dec4fca7103f563a70c2b70114
+checksum=526b5fe23417c41acbeb2273e470887b4593f48a297a8d9c1a1aa730d556f9fb
 
 # Note: For ROCm 7.x, device-libs sources are carried in llvm-project under amd/device-libs.

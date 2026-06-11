@@ -1,6 +1,6 @@
 # Template file for 'hip-runtime-amd'
 pkgname=hip-runtime-amd
-version=7.2.3
+version=7.2.4
 revision=1
 build_style=cmake
 build_wrksrc=clr-rocm-${version}
@@ -29,8 +29,8 @@ distfiles="
  https://github.com/ROCm/hip/archive/refs/tags/rocm-${version}.tar.gz>hip-rocm-${version}.tar.gz
 "
 checksum="
- 60faffa5c56ab04673e8c3f6f8788ce20cb0b284a8a5f3428abf14399591bded
- e6ab65cb2a236eee0e1f2738457367dffc3ce1e8dfb050ac22b7712e35aa896e
+ 44f1045707101438fc3dcff9d4f0abe2453af57976bbfbf429c4dd5e29aea9b8
+ e32bb08af5b62575d2daefa1d10edcbac2c9f200c877c6c5b0766b76febd482b
 "
 
 pre_configure() {

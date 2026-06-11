@@ -1,6 +1,6 @@
 # Template file for 'rocm-opencl'
 pkgname=rocm-opencl
-version=7.2.3
+version=7.2.4
 revision=1
 build_style=cmake
 configure_args="
@@ -21,7 +21,7 @@ maintainer="mark <mark@local>"
 license="MIT"
 homepage="https://github.com/ROCm/clr"
 distfiles="https://github.com/ROCm/clr/archive/refs/tags/rocm-${version}.tar.gz>clr-rocm-${version}.tar.gz"
-checksum=60faffa5c56ab04673e8c3f6f8788ce20cb0b284a8a5f3428abf14399591bded
+checksum=44f1045707101438fc3dcff9d4f0abe2453af57976bbfbf429c4dd5e29aea9b8
 
 post_extract() {
  sed -i '/add_subdirectory(tools\/clinfo)/d' "${wrksrc}/opencl/CMakeLists.txt"

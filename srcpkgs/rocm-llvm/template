@@ -1,6 +1,6 @@
 # Template file for 'rocm-llvm'
 pkgname=rocm-llvm
-version=7.2.3
+version=7.2.4
 revision=1
 build_style=cmake
 build_wrksrc=llvm
@@ -16,13 +16,13 @@ configure_args="
  -DLLVM_INCLUDE_TESTS=OFF
 "
 hostmakedepends="cmake ninja python3 perl"
-python_version=3
 short_desc="ROCm LLVM/Clang toolchain with AMDGPU target"
 maintainer="mark <mark@local>"
 license="Apache-2.0 WITH LLVM-exception"
 homepage="https://github.com/ROCm/llvm-project"
 distfiles="https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-${version}.tar.gz"
-checksum=6239fa0c72b150cf0a325676264d3030a67389dec4fca7103f563a70c2b70114
+checksum=526b5fe23417c41acbeb2273e470887b4593f48a297a8d9c1a1aa730d556f9fb
+python_version=3
 
 # Notes:
 # 1) This is a starter stub and may require additional split packages (-devel, -libs).
