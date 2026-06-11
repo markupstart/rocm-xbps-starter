@@ -1,0 +1,7 @@
+libhsa-runtime64.so.1 rocr-runtime-7.2.3_1
+libamd_comgr.so.3 rocm-comgr-7.2.3_1
+libamdhip64.so.7 hip-runtime-amd-7.2.3_1
+libamdocl64.so.2 rocm-opencl-7.2.3_1
+libhiprtc-builtins.so.7 hip-runtime-amd-7.2.3_1
+libhiprtc.so.7 hip-runtime-amd-7.2.3_1
+libcltrace.so rocm-opencl-7.2.3_1
