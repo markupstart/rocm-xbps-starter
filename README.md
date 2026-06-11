@@ -1,4 +1,4 @@
-ROCm xbps-src templates for Void Linux (current ROCm ver: 7.2.3)
+ROCm xbps-src templates for Void Linux (current ROCm ver: 7.2.4)
 
 This repo gives you templates and scripts to build core ROCm packages in Void. This is a personal project to get ROCM working on Void on my system.  Your mileage may vary, but currently everything builds and has been tested successfully.
 
